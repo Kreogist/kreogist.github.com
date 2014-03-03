@@ -54,7 +54,7 @@ body{
     height:auto;
 }
 #view_large{
-    max-width:50em;
+    max-width:43em;
 }
 #view_pannel_flex_container{
     display: -webkit-box;

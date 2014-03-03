@@ -1,4 +1,4 @@
-function click_preview(el){
-    view = document.getElementById("view_display")
-    view.setAttribute("src" ,el.src);
+function click_preview(srcName){
+    view = document.getElementById("view_large")
+    view.setAttribute("src" ,srcName);
 }
