@@ -7,18 +7,21 @@
         <script src="view_pannel.js"></script>
     </head>
     
-    <body>
+    <body><div id="large_flex_container">
         <div id="banner">
             <span class="banner_link"><a href="#">Cuties</a><a href="#">Tsucie</a><a href="#">Seituc</a></span>
         </div>
-        <div id="view_main">
-            <img id="view_display" src="1.png">
+    
+        <div id="view_large_container">
+            <img id="view_large" src="./1.png"></img>
         </div>
-        <div id="view_pannel">
-           <img src="1.png" onclick=click_preview(self)></img>
-           <img src="2.png" onclick=click_preview(self)></img>
-           <img src="3.png" onclick=click_preview(self)></img>
-           <img src="4.png" onclick=click_preview(self)></img>
+        
+        <div id="view_pannel_flex_container">
+           <div id="view_preview_1" class="view_preview"><img src="./1.png"></img></div>
+           <div id="view_preview_2" class="view_preview"><img src="./2.png"></img></div>
+           <div id="view_preview_3" class="view_preview"><img src="./3.png"></img></div>
+           <div id="view_preview_4" class="view_preview"><img src="./4.png"></img></div>
         </div>
-    </body>
+    
+    </div></body>
 </html>
