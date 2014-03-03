@@ -1,0 +1,58 @@
+body{
+    background:rgba(100,100,100,0.4);
+    font-size:18px;
+    padding:0;
+    margin:0;
+}
+
+
+#banner{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:2em;
+    line-height:2em;
+    background:rgba(128,128,128,0.9);
+    text-align:right;
+}
+.banner_link a:link, .banner_link a:visited, .banner_link a:hover, .banner_link a:active{
+    text-decoration:none;
+    color:#222;
+    transition:all 0.2s ease-in-out;
+    margin-right:2em;
+}
+.banner_link a:hover{
+    color:#cceeff;
+}
+.banner_link a:active{
+    color:#bbddff;
+}
+
+
+
+#view_main{
+    text-align:center;
+}
+#view_main img{
+    margin-top:4em;
+    max-height:20em;
+}
+#view_pannel{
+    position:absolute;
+    bottom:0;
+    height:8em;
+    width:100%;
+    margin:0;
+    padding:0;
+    text-align:center;
+    background:rgb(80,80,80);
+    overflow:hidden;
+}
+#view_pannel img{
+    height:6em;
+    top:3em;
+    margin:1em;
+    margin-left:3%;
+    margin-right:3%;
+}
