@@ -19,24 +19,65 @@ body{
     height:100%;
 }
 #banner{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    
+    -webkit-box-flex:1 0 auto;
+    -moz-box-flex:1 0 auto;
+    -webkit-flex:1 0 auto;
+    -ms-flex:1 0 auto;
+    flex:1 0 auto;
+    
+    flex-direction:row;
+    justify-content:flex-end;
+    align-items:center;
+    
+    z-index:9999;
+    width:100%;
+    min-height:2em;
+    
+    background:#444;
+}
+#banner_title{
+    -webkit-box-flex:1 0 auto;
+    -moz-box-flex:1 0 auto;
+    -webkit-flex:1 0 auto;
+    -ms-flex:1 0 auto;
+    flex:1 0 auto;
+
+    margin-left:1em;
+}
+.banner_link{
+    display: -webkit-box;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    
+    flex-direction:row;
+    justify-content:space-around;
+    align-items:center;
+    
+    height:100%;
+    min-width:12em;
+}
+.banner_link a:link, .banner_link a:visited, .banner_link a:hover, .banner_link a:active{    
     -webkit-box-flex:auto;
     -moz-box-flex:auto;
     -webkit-flex:auto;
     -ms-flex:auto;
     flex:auto;
     
-    text-align:right;
-
-    z-index:9999;
-}
-.banner_link a:link, .banner_link a:visited, .banner_link a:hover, .banner_link a:active{
     text-decoration:none;
-    color:#222;
+    color:#aaa;
     transition:all 0.2s ease-in-out;
-    margin-right:2em;
 }
 .banner_link a:hover{
     color:#cceeff;
+    text-shadow:0 0 15px white;
 }
 .banner_link a:active{
     color:#bbddff;
