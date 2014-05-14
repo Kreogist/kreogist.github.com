@@ -3,8 +3,8 @@
         <title>Kreogist Dev Team</title>
         <link rel="shortcut icon" href="#" />
         <meta charset="utf-8" />
-        <link rel="stylesheet" href="style.css" type="text/css" />
-        <script src="control.js"></script>
+        <link rel="stylesheet" href="./stylesheets/style.css" type="text/css" />
+        <script src="./javascripts/control.js"></script>
     </head>
     
     <body>
@@ -19,8 +19,8 @@
     </nav>
     
     <div id="content">
-        <div id="lage-view">
-            <img id="lage-view-pic" src="./1.png"></img>
+        <div id="large-view">
+            <img id="large-view-pic" src="./images/1.png" ></img>
         </div>
         <div id="summary-1" class="summary">
             <h1 class="exlight-font" >Cuties</h1>
@@ -40,10 +40,10 @@
         </div>
     </div>
     <div id="album">
-        <div id="small-view-1" class="small-view"><img src="./1.png" onclick=click_preview("1")></img></div>
-        <div id="small-view-2" class="small-view"><img src="./1.png" onclick=click_preview("2")></img></div>
-        <div id="small-view-3" class="small-view"><img src="./1.png" onclick=click_preview("3")></img></div>
-        <div id="small-view-4" class="small-view"><img src="./1.png" onclick=click_preview("4")></img></div>
+        <div class="small-view"><img id="small-view-pic-1" src="./images/1.png" index=1 onclick=click_preview(this)></img></div>
+        <div class="small-view"><img id="small-view-pic-2" src="./images/2.png" index=2 onclick=click_preview(this)></img></div>
+        <div class="small-view"><img id="small-view-pic-3" src="./images/3.png" index=3 onclick=click_preview(this)></img></div>
+        <div class="small-view"><img id="small-view-pic-4" src="./images/4.png" index=4 onclick=click_preview(this)></img></div>
     </div>
     </body>
 </html>
