@@ -1,0 +1,19 @@
+@mixin flex-container($flex-direction,$justify-content,$align-items){
+    display:  -webkit-box;
+    display:     -moz-box;
+    display:  -ms-flexbox;
+    display: -webkit-flex;
+    display:         flex;
+
+    flex-direction:$flex-direction;
+    justify-content:$justify-content;
+    align-items:$align-items;
+}
+
+@mixin flex-element($flex-grow,$flex-shrink,$flex-basis){
+    -webkit-box-flex:$flex-grow $flex-shrink $flex-basis;
+       -moz-box-flex:$flex-grow $flex-shrink $flex-basis;
+        -webkit-flex:$flex-grow $flex-shrink $flex-basis;
+            -ms-flex:$flex-grow $flex-shrink $flex-basis;
+                flex:$flex-grow $flex-shrink $flex-basis;
+}
