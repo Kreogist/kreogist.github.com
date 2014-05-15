@@ -1,13 +1,15 @@
-@mixin flex-container($flex-direction,$justify-content,$align-items){
+@mixin flex-container($flex-direction,$flex-wrap,$justify-content,$align-items){
     display:  -webkit-box;
     display:     -moz-box;
     display:  -ms-flexbox;
     display: -webkit-flex;
     display:         flex;
 
-    flex-direction:$flex-direction;
-    justify-content:$justify-content;
-    align-items:$align-items;
+            flex-flow:$flex-direction $flex-wrap;
+    -webkit-flex-flow:$flex-direction $flex-wrap;
+    
+    justify-content:$justify-content;//alignment along the main axis
+    align-items:$align-items;//alignment along the cross axis
 }
 
 @mixin flex-element($flex-grow,$flex-shrink,$flex-basis){
@@ -16,4 +18,43 @@
         -webkit-flex:$flex-grow $flex-shrink $flex-basis;
             -ms-flex:$flex-grow $flex-shrink $flex-basis;
                 flex:$flex-grow $flex-shrink $flex-basis;
+}
+
+#title{
+
+}
+#nav-links{
+    li{
+        a{
+            &:hover{
+                
+            }
+        }
+    }
+
+}
+#content{
+    @include flex-container(row,nowrap,center,center);
+}
+#large-view{
+    @include flex-element(1,0,auto);
+}
+#large-view-pic{
+
+}
+.summary{
+    display:none;
+    &.acitve{
+        display:block;
+        @include flex-element(1,1,auto);
+    }
+}
+#album{
+    @include flex-container(row,nowrap,space-between,center)
+}
+.small-view{
+    @include flex-element(1,0,auto);
+    img{
+        
+    }
 }
