@@ -46,14 +46,15 @@
 
 $link-color:rgb(170, 170, 170);
 $link-hover-color:lighten($link-color,60%);
-$banner-back-color:rgb(68, 68, 68);
+$banner-back-color:rgb(48,48,48);
+$banner-fore-color:rgb(170, 170, 170);
 
 $exlight-font:"SourceSansPro-ExtraLight", "华文细黑";
 $light-font:"SourceSansPro-Regular","华文细黑";
 $normal-font:'Exo 2', "华文细黑";
 
 body{
-    background:rgba(100,100,100,0.4);
+    background:lighten($banner-back-color,50%);
     font-size:18px;
     padding:0;
     margin:0;
@@ -83,6 +84,8 @@ a{
 
 
 #navbar{
+    @include flex-element(0,0,auto);
+    z-index:9100;
     width:auto;
     background:$banner-back-color;
     padding:0.6em 0.6em;
@@ -132,32 +135,46 @@ a{
 
 }
 #content{
-    @include flex-container(row,nowrap,center,center);
-    height:70%;
+    @include flex-element(1,0,auto);
+    @include flex-container(row,wrap,center,center);
 }
 
 #large-view{
     @include flex-element(0,0,auto);
+    height:auto;
 }
 #large-view-pic{
-    max-height:400px;
+    height:300px;
 }
 .summary{
-    display: none;
+    @include flex-element(0,0,auto);
+    @include flex-container(row,nowrap,center,center);
+    @include transition(all 0.5s ease);
+    margin-left:2em;
+    width:auto;
+    display:none;
     &.active{
         display: block;
-        @include flex-element(0,0,auto);
+        margin-left:2em;
     }
 }
 #album{
+    @include flex-element(0,0,auto);
     @include flex-container(row,nowrap,space-around,center);
+    @include transition(all 0.3s ease);
+    color:$banner-fore-color;
+    z-index:9000;
     padding:0;
     margin:0;
-    background:$banner-back-color;
+    width:auto;
+    background:darken($banner-back-color,5%);
+    &:hover{
+        background:$banner-back-color;
+    }
 }
 .small-view{
-    @include flex-element(1,0,auto);
-    @include flex-container(row,nowrap,center,center);
+    @include flex-element(1,1,auto);
+    @include flex-container(row,wrap,center,center);
     @include transition(all 0.3s ease);
     text-align:center;
     padding:1em 0;
@@ -165,9 +182,12 @@ a{
         max-height:60px;
     }
     &:hover{
-        background:lighten($banner-back-color,20%);
+        color:lighten($banner-fore-color,50%);
+        background:lighten($banner-back-color,10%);
     }
     &.active{
+        color:darken($banner-fore-color,50%);
         background:lighten($banner-back-color,50%);
     }
+    
 }
