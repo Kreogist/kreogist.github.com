@@ -1,3 +1,20 @@
+/*This file is supporsed to be generated,
+ *if you want to modify the style,
+ * please edit the scss file with the same file name*/
+
+@import url(http://fonts.googleapis.com/css?family=Exo+2);
+
+@font-face
+{
+    font-family: "SourceSansPro-ExtraLight";
+    src: url('fonts/SourceSansPro-ExtraLight.otf') format('OpenType');
+}
+
+@font-face
+{
+    font-family: "SourceSansPro-Regular";
+    src: url('fonts/SourceSansPro-Regular.otf') format('OpenType');
+}
 @mixin flex-container($flex-direction,$flex-wrap,$justify-content,$align-items){
     display:  -webkit-box;
     display:     -moz-box;
@@ -20,41 +37,137 @@
                 flex:$flex-grow $flex-shrink $flex-basis;
 }
 
-#title{
+@mixin transition($arg){
+    -webkit-transition:$arg;
+       -moz-transition:$arg;
+         -o-transition:$arg;
+            transition:$arg;
+}
 
+$link-color:rgb(170, 170, 170);
+$link-hover-color:lighten($link-color,60%);
+$banner-back-color:rgb(68, 68, 68);
+
+$exlight-font:"SourceSansPro-ExtraLight", "华文细黑";
+$light-font:"SourceSansPro-Regular","华文细黑";
+$normal-font:'Exo 2', "华文细黑";
+
+body{
+    background:rgba(100,100,100,0.4);
+    font-size:18px;
+    padding:0;
+    margin:0;
+    height:100%;
+    font-family:$normal-font;
+
+    @include flex-container(column,nowrap,space-between,strech);
+}
+
+
+a{
+    &:link{
+        color:$link-color;
+        text-decoration:none;
+    }
+    &:visited{
+        color:$link-color;
+    }
+    &:hover{
+        color:$link-hover-color;
+        text-shadow:0 0 10px #cceeff;
+    }
+    &:active{
+        color:$link-hover-color;
+    }
+}
+
+
+#navbar{
+    width:auto;
+    background:$banner-back-color;
+    padding:0.6em 0.6em;
+}
+#title{
+    color:white;
 }
 #nav-links{
-    li{
-        a{
-            &:hover{
-                
-            }
+    float:right;
+    a{
+        @include transition(all 0.3s ease);
+        padding:0 0.5em;
+        position:relative;
+        
+        &:before , &:after{
+            position:absolute;
+            display:inline-block;
+            opacity:0;
+            @include transition(all 0.3s ease);
         }
+        &:before{
+            left:1em;
+            content:">";
+        }
+        &:after{
+            right:1em;
+            content:"<";
+        }
+
+        &:hover{
+            &:before , &:after{
+                opacity:1;
+            }
+            &:before{
+                left:-0.3em;
+                content:">";
+            }
+            &:after{
+                right:-0.3em;
+                content:"<";
+            }
+            
+        }
+
     }
+    
 
 }
 #content{
     @include flex-container(row,nowrap,center,center);
+    height:70%;
 }
+
 #large-view{
-    @include flex-element(1,0,auto);
+    @include flex-element(0,0,auto);
 }
 #large-view-pic{
-
+    max-height:400px;
 }
 .summary{
-    display:none;
-    &.acitve{
-        display:block;
-        @include flex-element(1,1,auto);
+    display: none;
+    &.active{
+        display: block;
+        @include flex-element(0,0,auto);
     }
 }
 #album{
-    @include flex-container(row,nowrap,space-between,center)
+    @include flex-container(row,nowrap,space-around,center);
+    padding:0;
+    margin:0;
+    background:$banner-back-color;
 }
 .small-view{
     @include flex-element(1,0,auto);
+    @include flex-container(row,nowrap,center,center);
+    @include transition(all 0.3s ease);
+    text-align:center;
+    padding:1em 0;
     img{
-        
+        max-height:60px;
+    }
+    &:hover{
+        background:lighten($banner-back-color,20%);
+    }
+    &.active{
+        background:lighten($banner-back-color,50%);
     }
 }
