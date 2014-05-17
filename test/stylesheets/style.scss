@@ -22,11 +22,22 @@
     display: -webkit-flex;
     display:         flex;
 
-            flex-flow:$flex-direction $flex-wrap;
+
     -webkit-flex-flow:$flex-direction $flex-wrap;
-    
-    justify-content:$justify-content;//alignment along the main axis
-    align-items:$align-items;//alignment along the cross axis
+       -moz-flex-flow:$flex-direction $flex-wrap;
+        -ms-flex-flow:$flex-direction $flex-wrap;
+            flex-flow:$flex-direction $flex-wrap;
+
+
+    -webkit-justify-content:$justify-content;
+       -moz-justify-content:$justify-content;
+        -ms-justify-content:$justify-content;
+            justify-content:$justify-content;//alignment along the main axis
+
+    -webkit-align-items:$align-items;
+       -moz-align-items:$align-items;
+        -ms-align-items:$align-items;
+            align-items:$align-items;//alignment along the cross axis
 }
 
 @mixin flex-element($flex-grow,$flex-shrink,$flex-basis){
