@@ -95,25 +95,34 @@ a{
 
 #navbar{
     @include flex-element(0,0,auto);
-    @include flex-container(row,wrap,space-between,strech);
+    @include flex-container(row,nowrap,space-between,center);
     z-index:9100;
     width:auto;
     background:$banner-back-color;
-    padding:0.6em 0.6em;
+    height:2em;
 }
 #title{
+    @include flex-element(1,0,3);
+    margin:{
+        right:auto;
+        left:1em;
+        top:auto;
+        bottom:auto;
+    }
     color:white;
 }
+
 #nav-links{
-    float:right;
+    @include flex-container(row,wrap,center,strech);
+    @include flex-element(0,0,1);
+    text-align:center;
     a{
+        @include flex-element(1,0,auto);
         @include transition(all 0.3s ease);
-        padding:0 0.5em;
+        padding:0 1em;
         position:relative;
-        
         &:before , &:after{
             position:absolute;
-            display:inline-block;
             opacity:0;
             @include transition(all 0.3s ease);
         }
@@ -131,11 +140,11 @@ a{
                 opacity:1;
             }
             &:before{
-                left:-0.3em;
+                left:0.1em;
                 content:">";
             }
             &:after{
-                right:-0.3em;
+                right:0.1em;
                 content:"<";
             }
         }

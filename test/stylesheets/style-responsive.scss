@@ -1,25 +1,44 @@
 
 @media all and (max-width: 540px) and (min-width:360px){
     #navbar{
-        @include flex-container(column,wrap,center,strech);
+        @include flex-container(column,nowrap,flex-start,center);
+        @include transition(all 0.3s ease);
+        height:2.4em;
+        position:relative;
+        #nav-links{
+            visibility:hidden;
+        }
+        &:hover{
+            height:auto;
+            padding:{
+                top:0.5em;
+                bottom:0.5em;
+            }
+            #nav-links{
+            visibility:visible;
+            }
+        }
     }
-    
     #title{
         @include flex-element(1,0,auto);
-        text-align:center;
+        width:100%;
+        margin-bottom:1em;
+        padding-top:0.5em;
     }
-    
     #nav-links{
-        @include flex-element(1,0,auto);
+        @include flex-element(0,1,auto);
+        @include flex-container(row,wrap,center,strech);
         text-align:center;
+        width:100%;
+        padding-bottom:0.5em;
     }
-    
+
     #content{
         @include flex-container(column,wrap,center,center);
     }
-    
+
     #large-view-pic{
-        height:200px;
+        max-height:200px;
     }
     .small-view{
         img{
@@ -35,36 +54,53 @@
 
 @media all and (max-width:360px){
     #navbar{
-    @include flex-container(column,wrap,center,strech);
-    }
-    
-    #title{
-    @include flex-element(1,0,auto);
-    text-align:center;
-    }
-    
-    #nav-links{
-    @include flex-element(1,0,auto);
-    text-align:center;
-        a{
-            &:before , &:after{
-                display:none;
+        @include flex-container(column,nowrap,flex-start,strech);
+        @include transition(all 0.4s ease);
+        height:2.4em;
+        position:relative;
+        #nav-links{
+            text-align:center;
+            padding-bottom:0.5em;
+            display:none;
+            a{
+                @include flex-element(1,0,auto);
+                width:auto;
+                line-height:2em;
             }
         }
+        &:hover{
+            height:auto;
+            padding:{
+                top:0.5em;
+                bottom:0em;
+            }
+            #nav-links{
+                @include flex-element(1,0,auto);
+                @include flex-container(column,nowrap,center,strech);
+            }
+        }
+    }
+
+    #title{
+        @include flex-element(1,0,1);
+        width:auto;
+        margin-bottom:1em;
+        padding-top:0.5em;
     }
 
     #large-view-pic{
         height:120px;
     }
     #album{
-        @include flex-container(column,nowrap,center,strech);
+        @include flex-container(row,wrap,center,center);
+        @include flex-element(0,0,2);
     }
     .small-view{
-        @include flex-element(1,0,auto);
+        @include flex-element(1,0,1);
         @include transition(background 0.2s ease-in 0.1s);
         text-align:center;
+        width:50%;
         padding:1em 0;
-        width:100%;
         img{
             display:none;
         }
