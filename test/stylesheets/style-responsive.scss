@@ -6,7 +6,7 @@
         height:2.4em;
         position:relative;
         #nav-links{
-            visibility:hidden;
+            display:none;
         }
         &:hover{
             height:auto;
@@ -15,7 +15,11 @@
                 bottom:0.5em;
             }
             #nav-links{
-            visibility:visible;
+                @include flex-element(0,1,auto);
+                @include flex-container(row,wrap,center,strech);
+                text-align:center;
+                width:100%;
+                padding-bottom:0.5em;
             }
         }
     }
@@ -24,13 +28,6 @@
         width:auto;
         margin-bottom:1em;
         padding-top:0.5em;
-    }
-    #nav-links{
-        @include flex-element(0,1,auto);
-        @include flex-container(row,wrap,center,strech);
-        text-align:center;
-        width:100%;
-        padding-bottom:0.5em;
     }
 
     #content{
