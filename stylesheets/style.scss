@@ -1,20 +1,27 @@
 /*This file is supporsed to be generated,
- *if you want to modify the style,
+ * if you want to modify the style,
  * please edit the scss file with the same file name*/
 
-//@import url(http://fonts.googleapis.com/css?family=Exo+2);
+
+@font-face
+{
+    font-family: "Exo-Regular";
+    src: url('../fonts/Exo-Regular.otf') format('OpenType');
+}
 
 @font-face
 {
     font-family: "SourceSansPro-ExtraLight";
-    src: url('fonts/SourceSansPro-ExtraLight.otf') format('OpenType');
+    src: url('../fonts/SourceSansPro-ExtraLight.otf') format('OpenType');
 }
 
 @font-face
 {
     font-family: "SourceSansPro-Regular";
-    src: url('fonts/SourceSansPro-Regular.otf') format('OpenType');
+    src: url('../fonts/SourceSansPro-Regular.otf') format('OpenType');
 }
+
+
 
 @mixin flex-container($flex-direction,$flex-wrap,$justify-content,$align-items){
     display:  -webkit-box;
@@ -56,6 +63,18 @@
             transition:$arg;
 }
 
+@mixin transform($arg){
+    -webkit-transform:$arg;
+            transform:$arg;
+}
+
+@mixin animation($name,$duration,$delay,$repeat){
+    -webkit-animation:$name $duration $delay $repeat;
+       -moz-animation:$name $duration $delay $repeat;
+         -o-animation:$name $duration $delay $repeat;
+            animation:$name $duration $delay $repeat;
+}
+
 $link-color:rgb(170, 170, 170);
 $link-hover-color:lighten($link-color,60%);
 $banner-back-color:rgb(48,48,48);
@@ -63,7 +82,11 @@ $banner-fore-color:rgb(170, 170, 170);
 
 $exlight-font:"SourceSansPro-ExtraLight", "华文细黑";
 $light-font:"SourceSansPro-Regular","华文细黑";
-$normal-font:'Exo 2', "华文细黑";
+$normal-font:'Exo-Regular', "华文细黑";
+
+.exlight-font{
+    font-family:$exlight-font;
+}
 
 body{
     @include flex-container(column,nowrap,space-between,strech);
@@ -154,12 +177,56 @@ a{
 #content{
     @include flex-element(1,0,auto);
     @include flex-container(row,wrap,center,center);
+    @include transition(background-color ease 0.3s 0.3s);
+    .summary{
+        h1{
+            text-shadow: 0 0 1px rgba(255,255,255,0),0px 0px 5px rgba(38, 170, 255,0);
+            font-size:2em;
+            @include transform(rotateX(0deg));
+            @include transition(all ease 0.6s 0.4s);
+        }
+        h2{
+            @include transition(all ease 0.3s 0.8s);
+        }
+        h2:after{
+            display:inline-block;
+            padding:0 1em;
+            content:"> > >";
+            color:white;
+            text-shadow: 0 0 1px rgba(255,255,255,1),0px 0px 5px rgba(38, 170, 255,1);
+            height:1em;
+            @include transform(translate3d(-1em,0,0) rotateX(90deg));
+            opacity:0;
+            @include transition(all linear 0.2s 1.3s);
+        }
+    }
+}
+
+#content:hover{
+    background-color: rgb(48,48,48);
+    .summary{
+        h1{
+            color: rgba(148, 213, 255, 1);
+            text-shadow: 0 0 1px rgba(255,255,255,1),0px 0px 5px rgba(38, 170, 255,1);
+            font-size: 4em;
+            @include transform(rotateX(360deg));
+        }
+        h2{
+            color: white;
+        }
+        h2:after{
+            @include transform(translate3d(0em,0,0) rotateX(0deg));
+            opacity:1;
+            @include animation(arrowflash,1.6s,1.6s,infinite);
+        }
+    }
 }
 
 #large-view-container{
     @include flex-element(0,0,auto);
     height:auto;
 }
+
 .large-view-pic{
     height:300px;
     display:none;
@@ -216,4 +283,76 @@ a{
     }
 }
 
+@-webkit-keyframes arrowflash{
+    0%{
+        @include transform(scale(1) translate3d(0em,0,0));
+        opacity:0;
+    }
+    40%{
+        @include transform(scale(1) translate3d(0em,0,0));
+        opacity:1;
+    }
+    50%{
+        color:white;
+        @include transform(scale(0.8) translate3d(0em,0,0));
+    }
+    60%{
+        color: rgba(148, 213, 255, 1);
+        @include transform(scale(1) translate3d(0em,0,0));
+        opacity:1;
+    }
+    100%{
+        color:white;
+        @include transform(scale(1) translate3d(2em,0,0));
+        opacity:0;
+    }
+}
+@-moz-keyframes arrowflash{
+    0%{
+        @include transform(scale(1) translate3d(0em,0,0));
+        opacity:0;
+    }
+    40%{
+        @include transform(scale(1) translate3d(0em,0,0));
+        opacity:1;
+    }
+    50%{
+        color:white;
+        @include transform(scale(0.8) translate3d(0em,0,0));
+    }
+    60%{
+        color: rgba(148, 213, 255, 1);
+        @include transform(scale(1) translate3d(0em,0,0));
+        opacity:1;
+    }
+    100%{
+        color:white;
+        @include transform(scale(1) translate3d(2em,0,0));
+        opacity:0;
+    }
+}
+@keyframes arrowflash{
+    0%{
+        @include transform(scale(1) translate3d(0em,0,0));
+        opacity:0;
+    }
+    40%{
+        @include transform(scale(1) translate3d(0em,0,0));
+        opacity:1;
+    }
+    50%{
+        color:white;
+        @include transform(scale(0.8) translate3d(0em,0,0));
+    }
+    60%{
+        color: rgba(148, 213, 255, 1);
+        @include transform(scale(1) translate3d(0em,0,0));
+        opacity:1;
+    }
+    100%{
+        color:white;
+        @include transform(scale(1) translate3d(2em,0,0));
+        opacity:0;
+    }
+}
 @import "style-responsive.scss"
