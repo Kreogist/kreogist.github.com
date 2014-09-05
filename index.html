@@ -19,8 +19,9 @@
     </nav>
 
     <div id="content">
-        <div id="large-view">
-            <img id="large-view-pic" src="./images/1.png" ></img>
+        <div id="large-view-container">
+            <img id="large-view-1" class="large-view-pic active" src="./images/1.png" ></img>
+            <img id="large-view-2" class="large-view-pic" src="./images/2.png" ></img>
         </div>
         <div id="summary-container">
             <div id="summary-1" class="summary active">
@@ -28,12 +29,12 @@
                 <h2 class="exlight-font" >Let&#39;s Debugging!</h2>
             </div>
             <div id="summary-2" class="summary">
-                <a href=""><h1 class="exlight-font" >Mu</h1>
-                <h2 class="exlight-font" >Your final media center, just here.</h2></a>
+                <h1 class="exlight-font" >Mu</h1>
+                <h2 class="exlight-font" >Your final media center, just here.</h2>
             </div>
         </div>
     </div>
-    <div id="album">
+    <div id="small-view-container">
         <div class="small-view active" index=1 onclick=click_preview(this)><img id="small-view-pic-1" src="./images/1.png" ></img><span>Cuties</span></div>
         <div class="small-view" index=2 onclick=click_preview(this)><img id="small-view-pic-2" src="./images/2.png" ></img><span>Mu</span></div>
     </div>

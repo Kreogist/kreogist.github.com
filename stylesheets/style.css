@@ -2,7 +2,6 @@
 /*This file is supporsed to be generated,
  *if you want to modify the style,
  * please edit the scss file with the same file name*/
-@import url(http://fonts.googleapis.com/css?family=Exo+2);
 @font-face {
   font-family: "SourceSansPro-ExtraLight";
   src: url("fonts/SourceSansPro-ExtraLight.otf") format("OpenType"); }
@@ -167,7 +166,7 @@ a:active {
   -ms-align-items: center;
   align-items: center; }
 
-#large-view {
+#large-view-container {
   -webkit-box-flex: 0 0 auto;
   -moz-box-flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
@@ -175,8 +174,12 @@ a:active {
   flex: 0 0 auto;
   height: auto; }
 
-#large-view-pic {
-  height: 300px; }
+.large-view-pic {
+  height: 300px;
+  display: none; }
+
+.large-view-pic.active {
+  display: block; }
 
 .summary {
   -webkit-box-flex: 0 0 auto;
@@ -212,7 +215,7 @@ a:active {
     display: block;
     margin-left: 2em; }
 
-#album {
+#small-view-container {
   -webkit-box-flex: 0 0 auto;
   -moz-box-flex: 0 0 auto;
   -webkit-flex: 0 0 auto;
@@ -245,7 +248,7 @@ a:active {
   margin: 0;
   width: auto;
   background: #232323; }
-  #album:hover {
+  #small-view-container:hover {
     background: #303030; }
 
 .small-view {

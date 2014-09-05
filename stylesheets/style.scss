@@ -2,7 +2,7 @@
  *if you want to modify the style,
  * please edit the scss file with the same file name*/
 
-@import url(http://fonts.googleapis.com/css?family=Exo+2);
+//@import url(http://fonts.googleapis.com/css?family=Exo+2);
 
 @font-face
 {
@@ -15,6 +15,7 @@
     font-family: "SourceSansPro-Regular";
     src: url('fonts/SourceSansPro-Regular.otf') format('OpenType');
 }
+
 @mixin flex-container($flex-direction,$flex-wrap,$justify-content,$align-items){
     display:  -webkit-box;
     display:     -moz-box;
@@ -155,12 +156,16 @@ a{
     @include flex-container(row,wrap,center,center);
 }
 
-#large-view{
+#large-view-container{
     @include flex-element(0,0,auto);
     height:auto;
 }
-#large-view-pic{
+.large-view-pic{
     height:300px;
+    display:none;
+}
+.large-view-pic.active{
+    display:block;
 }
 .summary{
     @include flex-element(0,0,auto);
@@ -174,7 +179,7 @@ a{
         margin-left:2em;
     }
 }
-#album{
+#small-view-container{
     @include flex-element(0,0,auto);
     @include flex-container(row,nowrap,space-around,center);
     @include transition(all 0.3s ease);
