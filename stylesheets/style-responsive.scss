@@ -110,9 +110,10 @@
     }
 }
 
-@media only screen and (max-device-width: 1080px), handheld{
+@media only screen and (max-device-width: 1080px), only handheld{
     //for mobile device
     #content{
+        background-color: rgb(48,48,48);
         .summary{
             h1{
                 color: rgba(148, 213, 255, 1);
