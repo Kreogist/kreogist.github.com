@@ -110,7 +110,7 @@
     }
 }
 
-@media only screen and (max-device-width: 1080px), only handheld{
+@media only screen and (max-device-width: 1080px), only handheld and (orentation: landscape){
     //for mobile device
     #content{
         background-color: rgb(48,48,48);
@@ -118,11 +118,12 @@
             h1{
                 color: rgba(148, 213, 255, 1);
                 text-shadow: 0 0 1px rgba(255,255,255,1),0px 0px 5px rgba(38, 170, 255,1);
-                font-size: 4em;
+                font-size: 3em;
                 @include transform(rotateX(360deg));
             }
             h2{
                 color: white;
+                font-size:1.2em;
             }
             h2:after{
                 @include transform(translate3d(0em,0,0) rotateX(0deg));
@@ -130,5 +131,10 @@
                 @include animation(arrowflash,1.6s,1.6s,infinite);
             }
         }
+    }
+}
+@media only screen and (max-device-height: 400px), only handheld and (orentation: portrait){
+    .large-view-pic{
+        height:110px;
     }
 }
