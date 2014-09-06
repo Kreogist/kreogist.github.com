@@ -110,7 +110,8 @@
     }
 }
 
-@media handheld{
+@media only screen and (max-device-width: 1080px), handheld{
+    //for mobile device
     #content{
         .summary{
             h1{
