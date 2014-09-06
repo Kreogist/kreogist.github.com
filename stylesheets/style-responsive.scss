@@ -34,7 +34,7 @@
         @include flex-container(column,wrap,center,center);
     }
 
-    #large-view-pic{
+    .large-view-pic{
         max-height:200px;
     }
     .small-view{
@@ -85,10 +85,10 @@
         padding-top:0.5em;
     }
 
-    #large-view-pic{
+    .large-view-pic{
         height:120px;
     }
-    #album{
+    #small-view-container{
         @include flex-container(row,wrap,center,center);
         @include flex-element(0,0,2);
     }
