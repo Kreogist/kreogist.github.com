@@ -178,6 +178,7 @@ a{
     @include flex-element(1,0,auto);
     @include flex-container(row,wrap,center,center);
     @include transition(background-color ease 0.3s 0.3s);
+    cursor:pointer;
     .summary{
         h1{
             text-shadow: 0 0 1px rgba(255,255,255,0),0px 0px 5px rgba(38, 170, 255,0);
