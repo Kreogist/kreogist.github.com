@@ -38,8 +38,10 @@ function unsetActive(){
 }
 
 function click_preview(view_pic){
-    idx=view_pic.getAttribute("index").toString();
-    document.getElementById("content").setAttribute("onclick","javascript:window.location=jump_list["+(idx-1).toString()+"]");
+    var idx=view_pic.getAttribute("index").toString();
+    var ctt=document.getElementById("content");
+    ctt.setAttribute("onclick","javascript:window.location=jump_list["+(idx-1).toString()+"]");
+    ctt.setAttribute("data-idx",idx-1);
     for(var i = 1;i <= sm_count;++i){
         var el_summary = document.getElementById(summary + i.toString());
         var el_small_view_pic = document.getElementById(small_view_pic + i.toString()).parentElement;
