@@ -64,6 +64,7 @@
 
 @mixin transform($args...){
     -webkit-transform:$args;
+       -moz-transform:$args;
             transform:$args;
 }
 

@@ -1,0 +1,85 @@
+
+//responsive style rules.
+@media print, screen and (max-width: 720px) {
+  #title .credits {
+  display: block;
+  width: 100%;
+  line-height: 30px;
+  text-align: center;
+
+  &.left {
+    float: none;
+    display: block;
+  }
+
+  .right {
+    float: none;
+    display: block;
+  }
+  }
+  #header nav li.icon{
+    height:40px;
+    margin:5px 0;
+    &>img{width:35px;}
+  }
+  #header nav>li>a{
+    padding:10px 0;
+    margin-right:0.1em;
+  }
+}
+@media print, screen and (max-width: 480px) {
+  section {
+    margin-top: 40px;
+  }
+  #header nav{
+    padding:0;
+    text-align:center;
+  }
+  #header nav li.cat{
+    height:0;
+    overflow:hidden;
+    background:$clr-bodybackground;
+  }
+  #header nav.active {
+    & li.cat{height:100%;}
+    & #btn-menu{@include box-shadow(inset 1px 1px 3px black);}
+  }
+  #header nav li.icon{
+    float:none;
+    display:block;
+    height:40px;
+    margin:10px 0;
+    &>img{width:35px;}
+  }
+  #header #btn-menu{
+    display:block;
+    position:absolute;
+    top:10px;
+    right:10px;
+    height:40px;
+    width:40px;
+    line-height:40px;
+    cursor:pointer;
+    background: {
+      image:url(../images/menu.svg);
+      position:center center;
+      size:30px 30px;
+      repeat:no-repeat;
+    };
+  }
+  #header nav li.cat{
+    display:block;
+    float:none;
+    width:100%;
+    color:lighten($clr-bodyforeground,20%);
+  }
+  #header nav li.cat>a{width:auto;}
+  #header nav li.cat.active{
+    text-shadow:none;
+    background:rgba(239,227,50,1);
+    box-shadow:0 0 10px rgba(239,227,50,1);
+  }
+  #header nav li.cat.active::after{
+    display:none;
+  }
+}

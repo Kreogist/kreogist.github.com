@@ -1,0 +1,80 @@
+<h1>Git, managed code</h1>
+<p class="align-left">Some contents of this page is from <a href="https://help.github.com/categories/54/articles">here</a> by Github. You can visit this page to know more about Git and Github.</p>
+<h2 class="align-left" id="introduction">Introduction</h2>
+<p class="align-left">μ used Git as revision control tool. This document is meant for μ developers and maintainers as a simple way to getting started with Git. We setup μ project at Github for master. </p>
+<p class="align-left">Subversion checkout URL can be browsed at <a href="https://github.com/Kreogist/Mu">μ Github homepage</a>.</p>
+<h2 class="align-left" id="getting-started-of-git">Getting started of Git</h2>
+<p class="align-left"><strong>If you have trouble with this, please visit: <a href="https://help.github.com/articles/set-up-git#platform-all">Set Up Git (Github)</a>, Anything not covered by this document can be found this link.</strong></p>
+<h3 class="align-left" id="download-git">Download Git</h3>
+<p class="align-left">Download and install <a href="http://git-scm.com/downloads">the latest version of Git</a>. Please mentioned that Git won’t add an icon anywhere, it’s not that sort of application. </p>
+<h3 class="align-left" id="configure-git-name">Configure Git - Name</h3>
+<p class="align-left">Now that you have Git installed, it’s time to configure your settings. To do this you need to open the command line. First you need to tell git your name, so that it can properly label the commits you make. </p>
+<pre><code>git config --global user.name "Your Name Here"
+</code></pre>
+<h3 class="align-left" id="configure-git-e-mail">Configure Git - E-mail</h3>
+<p class="align-left">Git saves your email address into the commits you make. Github use the email address to associate your commits with your GitHub account. So you need to set the email.</p>
+<pre><code>git config --global user.email "your_email@example.com"
+</code></pre>
+<p class="align-left">Tips: If you own a Github account and you are using github, your email address for Git should be the same one associated with your GitHub account. If it is not, see <a href="https://help.github.com/articles/how-do-i-change-my-primary-email-address">this guide</a> for help adding additional emails to your GitHub account. If you want to keep your email address hidden, <a href="https://help.github.com/articles/keeping-your-email-address-private">this guide</a> may be useful to you.</p>
+<h3 class="align-left" id="configure-git-password-caching">Configure Git - Password caching</h3>
+<p class="align-left">The last option we need to set will tell git that you don’t want to type your username and password every time you talk to a remote server. You need git 1.7.10 or newer to use the credential helper.</p>
+<p class="align-left">To use this option, you need to turn on the credential helper so that git will save your password in memory for some time:</p>
+<pre><code>git config --global credential.helper cache
+</code></pre>
+<p class="align-left">By default git will cache your password for 15 minutes. You can change this if you like.</p>
+<pre><code>git config --global credential.helper 'cache --timeout=3600'
+</code></pre>
+<p class="align-left">The credential helper only works when you clone an HTTPS repository URL. If you use the SSH repository URL instead, SSH keys are used for authentication. This guide offers help generating and using an SSH key pair.</p>
+<p class="align-left">Congratulations, you now have Git and GitHub all set up! </p>
+<h2 class="align-left" id="get-source-code">Get source code</h2>
+<p class="align-left">At some point you may find yourself wanting to contribute to someone else’s project, or would like to use someone’s project as the starting point for your own. This is known as “forking”. </p>
+<p class="align-left">You can fork μ to your own repository, or just clone our repository. We recommand you to fork to yourself. </p>
+<h3 class="align-left" id="fork-the-mu-repository">Fork the μ repository</h3>
+<p class="align-left">On Github, to fork μ, click the “Fork” button in the μ repository.</p>
+<p><img src="https://github-images.s3.amazonaws.com/help/bootcamp/Bootcamp-Fork.png" alt="Fork Mu" title=""></p>
+<h3 class="align-left" id="clone-your-fork">Clone your fork</h3>
+<p class="align-left">You’ve successfully forked the μ repository, but so far it only exists on GitHub. To be able to work on the project, you will need to clone it to your local machine.</p>
+<p class="align-left">Run the following code:</p>
+<pre><code>git clone https://github.com/username/Mu.git
+</code></pre>
+<p class="align-left">We suggest you to use <code>https</code> link to clone our project. Now the repository is available in the directory “Mu”. </p>
+<h2 class="align-left" id="create-your-own-Mu">Create your own μ</h2>
+<p class="align-left">You’ve successfully forked a repository, but get a load of these other cool things you can do:</p>
+<h3 class="align-left" id="commit-your-changes">Commit your changes</h3>
+<p class="align-left">A commit, or “revision”, is an individual change to a file (or set of files). It’s like when you save a file, except with Git, every time you save it creates a unique ID (a.k.a. the “SHA” or “hash”) that allows you to keep record of what changes were made when and by who. Commits usually contain a commit message which is a brief description of what changes were made.</p>
+<p class="align-left">Think of a commit as a snapshot of your project — code, files, everything — at a particular point in time. After your first commit git will only save the files that have changed, thus saving space.</p>
+<p class="align-left">To create a commit, you have to add your modified files first, using <code>git add</code> command:</p>
+<p class="align-left">usage of git add: </p>
+<pre><code>git add [options] [--] &lt;filepattern&gt;...
+
+-n, --dry-run         dry run
+-v, --verbose         be verbose
+-i, --interactive     interactive picking
+-p, --patch           select hunks interactively
+-e, --edit            edit current diff and apply
+-f, --force           allow adding otherwise ignored files
+-u, --update          update tracked files
+-N, --intent-to-add   record only the fact that the path will be added later
+-A, --all             add changes from all tracked and untracked files
+--refresh             don't add, only refresh the index
+--ignore-errors       just skip files which cannot be added because of errors
+--ignore-missing      check if - even missing - files are ignored in dry run
+</code></pre>
+<p class="align-left">Warning: Git will do its best to compress your files, but large files and binaries can cause a repository to become bloated and unwieldy. Try to <strong>avoid committing</strong> things like compressed files (zips, rars, jars), compiled code (object files, libraries, executables), database backups, and media files (flv, psd, music, movies).</p>
+<h3 class="align-left" id="push-commits">Push Commits</h3>
+<p class="align-left">Once you’ve made some commits to a forked repository and want to push it to your forked project, you do it the same way you would with a regular repository:</p>
+<pre><code>git push origin master
+</code></pre>
+<h3 class="align-left" id="pull-in-upstream-changes">Pull in upstream changes</h3>
+<p class="align-left">There are two ways to get commits from a remote repository or branch: git fetch and git pull. While they might seem similar at first, there are distinct differences you should consider.</p>
+<p class="align-left">When you use <code>git pull</code>, git tries to automatically do your work for you. It is context sensitive, so git will merge any pulled commits into the branch you are currently working in. One thing to keep in mind is that git pull automatically merges the commits without letting you review them first. If you don’t closely manage your branches you may run into frequent conflicts.</p>
+<pre><code>git pull upstream master
+</code></pre>
+<p class="align-left">When you <code>git fetch</code>, git retrieves any commits from the target remote that you do not have and stores them in your local repository. However, it does not merge them with your current branch. This is particularly useful if you need to keep your repository up to date but are working on something that might break if you update your files. To integrate the commits into your local branch, you use <code>git merge</code>. This combines the specified branches and prompts you if there are any conflicts.</p>
+<pre><code>git fetch upstream
+git merge upstream/master
+</code></pre>
+<h3 class="align-left" id="further-reading">Further Reading</h3>
+<p class="align-left"><a href="https://help.github.com/articles/fork-a-repo#create-branches">Create branches</a></p>
+<p class="align-left"><a href="https://help.github.com/articles/using-pull-requests">Using Pull Requests</a></p>
+<p class="align-left"><a href="https://help.github.com/articles/deleting-a-repository">Delete a repository</a></p>

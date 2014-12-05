@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon" />
+    <title>Kreogist μ - The way it's meant to be heard</title>
+    <link rel="stylesheet" href="../stylesheets/styles.css">
+    <link rel="stylesheet" href="../stylesheets/pygment_trac.css">
+    <script type="text/javascript" src="../javascripts/respond.js"></script>
+    <script type="text/javascript" src="../javascripts/classie.js"></script>
+    <script type="text/javascript" src="javascripts/kaji.js"></script>
+    <script type="text/javascript" src="../javascripts/kcommon.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body id="features-page">
+    <script>kaji.writeBanner("", "features.html");</script>
+    <div class="wrapper">
+        <div id="title">
+          <section id="born-for-music">
+            <h1>Born for music. Only for music</h1>
+            <p>When somebody are still chanting their outdated “feelings”, we have already focused on the nature of the music. When they are still talking about their apocryphal “hypostatization”, we are trying to improved their real feelings. We do our best to delight your ears, although we are still a small team.</p>
+            <img id="mu-logo" src="../images/mu-logo.png" alt="mu-logo">
+          </section>
+          <section id="lossless">
+            <h2>Lossless, no less</h2>
+            <p>Playing music is the cornerstone of a music player, and the sound quality is the total life of it. μ  supports a variety kinds of lossless music formats, also supports MP3, AAC and other popular audio formats*. The only thing you need to do is simply plugging in your headphones, sit and listen.</p>
+            <div id="music-tag1" class="music-tags"></div>
+            <div id="music-tag2" class="music-tags"></div>
+            <div id="music-tag3" class="music-tags"></div>
+            <div id="music-tag4" class="music-tags"></div>
+            <div id="music-tag5" class="music-tags"></div>
+            <div id="music-tag6" class="music-tags"></div>
+            <div id="music-tag7" class="music-tags"></div>
+            <div id="music-tag8" class="music-tags"></div>
+          </section>
+          <section id="enjoy-concert">
+            <h2>Enjoy your concert everywhere</h2>
+            <p>Based on rock-solid Qt development framework, μ can run on all mainstream operating systems. Strong foundation provides strong performance and excellent user experience. Your computer has been on standby already, ready for you to start the concert.</p>
+            <img src="../images/preview-mac.png"   alt="preview-mac"   class="preview-pcs" id="preview-mac">
+            <img src="../images/preview-linux.png" alt="preview-linux" class="preview-pcs" id="preview-linux">
+            <img src="../images/preview-win.png"   alt="preview-win"   class="preview-pcs" id="preview-win">
+          </section>
+          <section id="open-source">
+            <h2>Open-Source Force</h2>
+            <p>Building μ is based on a number of open source projects. μ is a open source project, we not only hope μ can continuous evolve, but also to meet geeks custom desires. Anyone can get the source code and development documentation free of charge, we also provide timely online technical support.</p>
+            <img src="../images/open-source.png" alt="open-source" id="open-source-logo">
+            <img src="../images/ffmpeg-logo.png" class="opensource-logos" alt="ffmpeg-logo" id="ffmpeg-logo">
+            <img src="../images/qt-logo.png"     class="opensource-logos" alt="qt-logo"     id="qt-logo">
+            <img src="../images/vlc-logo.png"    class="opensource-logos" alt="vlc-logo"    id="vlc-logo">
+          </section>
+		  <section>
+		    <h2>Start your concert now!</h2>
+			<p><img src="../images/start_your_concert.png"></p>
+			<p><a href="downloads.html">Get your own μ! ></a></p>
+		  </section>
+      <footer>
+        <script>kaji.writeFooter("");</script>
+          </footer>
+        </div>
+    </div>
+    <!--add parallax effect-->
+    <div id="parallax-fore"></div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    <script type="text/javascript">
+    (function(){
+
+      var foreLayer,
+          backLayer,
+          sectionBoxes,
+          sectionBoxesHeight;
+
+      function reactType(y) {
+        //-1 : before active
+        //0  : now active
+        //1  : after active
+        if ( ( y > (0.70)*sectionBoxesHeight ) ) {
+          return -1;
+        } else if ( y < (0.1)*sectionBoxesHeight ) {
+          return 1;
+        } else {
+          return 0;
+        }
+      }
+
+      function iconReactType(y) {
+        //-1 : before active
+        //0  : now active
+        //1  : after active
+        if ( ( y < (-0.25)*sectionBoxesHeight ) ) {
+          return 1;
+        } else  {
+          return 0;
+        }
+      }
+
+      function setState(sectionBox){
+        var state;
+        if (sectionBox.id == "born-for-music"){
+          state = iconReactType( sectionBox.getBoundingClientRect().top );
+        } else {
+          state = reactType( sectionBox.getBoundingClientRect().top );
+        }
+
+        switch (state) {
+          case 1:
+            sectionBox.setAttribute("class", "after-active");
+            break;
+          case -1:
+            sectionBox.setAttribute("class", "before-active");
+            break;
+          case 0:
+            sectionBox.setAttribute("class", "now-active");
+            break;
+        }
+      }
+
+      function applyState() {
+        for (var i = 0;i < sectionBoxes.length;i++) {
+          (function(i) {
+            var j = i;
+            setState(sectionBoxes[j]);
+          }
+          )(i);
+        }
+      }
+
+      function kajiScroll(){
+        //start parallax
+        var Y = window.pageYOffset;
+        backLayer.style.backgroundPosition = " 0 -" + Y*0.6 + "px";
+        foreLayer.style.backgroundPosition = " 0 -" + Y*0.8 + "px";
+        //end parallax
+
+        applyState();
+      }
+
+      function init(){
+        foreLayer = document.getElementById("parallax-fore");
+        backLayer = document.body;
+        sectionBoxes = Array.prototype.slice.call( document.querySelectorAll("#title>section") );
+        sectionBoxesHeight = sectionBoxes[0].getBoundingClientRect().height;
+        window.addEventListener("scroll",kajiScroll);
+        applyState();
+      }
+
+      init();
+
+    })();
+    </script>
+  </body>
+</html>

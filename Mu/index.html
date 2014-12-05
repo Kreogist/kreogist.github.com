@@ -1,0 +1,28 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+  <link rel="shortcut icon" href="favicon.png" type="image/x-icon" />
+  <meta charset="utf-8" />
+  <script>
+  var explorerType=navigator.appName;
+  if(explorerType=="Netscape")
+  {
+    var envLanguage=navigator.language.toUpperCase();
+  }
+  else
+  {
+    var envLanguage=navigator.userLanguage.toUpperCase();
+  }
+  if(envLanguage=="ZH-CN")
+  {
+    window.location.href="cn/index.html";
+  }
+  else
+  {
+    window.location.href="en/index.html";
+  }
+  </script>
+  </head>
+  <body>
+  </body>
+</html>

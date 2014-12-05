@@ -1,0 +1,421 @@
+
+//styles for page body
+
+#parallax-fore{
+  position:fixed;
+  top:0;
+  left:0;
+  z-index:-1;
+  width:100vw;
+  height:100vh;
+  pointer-events:none;
+  background-attachment:fixed;
+  background-image:url("../images/parallax-fore.png");
+
+}
+.wrapper{
+  overflow:hidden;
+  padding:4em 20px 0;
+  max-width: 1104px;
+  margin: 60px auto 0;
+  position: relative;
+}
+#title {
+  border: 0;
+  outline: none;
+  margin: 0 0 50px 0;
+  padding: 0 0 5px 0;
+  //#title
+  h1,h2,h3{
+    font-family:$font-light;
+    text-align:center;
+  }
+
+  h1{
+    font-size:3em;
+    margin:0.1em 0;
+  }
+
+  h2{
+    font-size:2em;
+  }
+
+  p {
+    margin:1em 0;
+    color: #d7cfbe;
+    font-weight: normal;
+    font-family:$font-light;
+    font-size: 1em;
+    text-align:center;
+  }
+  p.slogan{
+    color:lighten($clr-bodybackground,40%);
+    font-size:2em;
+    margin:0;
+  }
+  // #title
+  .hints,.credits{
+    font-size: 11px;
+    font-family: $font-regular;
+    font-weight: normal;
+    color: #696969;
+  }
+  .credits{
+
+    &.left {
+      float: left;
+    }
+
+    &.right {
+      float: right;
+    }
+  }
+  .mu-communities{
+    position: relative;
+    width: 50%;
+    float: left;
+  }
+  .contact-to-kreogist{
+    width: 50%;
+    float: right;
+  }
+  // #title
+  .downloadButton{
+    display:block;
+    text-align:center;
+    height: 1.5em;
+    width: 9em;
+    margin:1em auto ;
+    font-size: 2em;
+    line-height: 1.5em;
+    color: rgba(255,255,255,1);
+    border-radius: 5px;
+    background-image: linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.2) 0%,
+        rgba(255,255,255,0.2) 45%,
+        rgba(255,255,255,0.0) 55%,
+        rgba(255,255,255,0.0) 100%
+      ),radial-gradient(
+        at center center,
+        rgba(255,255,255,0.3) 0%,
+        rgba(255,255,255,0.0) 80%
+      );
+    @include box-shadow(
+             0    0 25px rgba(255,255,255,0),
+             0    0  5px rgba(255,255,255,0.3),
+    inset    0  1px      rgba(0,0,0,0.6),
+    inset    0 -1px      rgba(0,0,0,0.6),
+    inset  1px    0      rgba(0,0,0,0.6),
+    inset -1px    0      rgba(0,0,0,0.6),
+    inset    0  2px      rgba(255,255,255,0.3),
+    inset    0 -2px      rgba(255,255,255,0.3),
+    inset  2px    0      rgba(255,255,255,0.3),
+    inset -2px    0      rgba(255,255,255,0.3),
+    inset    0 -2px  5px rgba(255,255,255,0.3) );
+    @include transition(all,0.3s,ease);
+    &:hover{
+      background-image: linear-gradient(
+        to bottom,
+        rgba(255,255,255,0.2) 0%,
+        rgba(255,255,255,0.2) 45%,
+        rgba(255,255,255,0.0) 55%,
+        rgba(255,255,255,0.0) 100%
+      ),radial-gradient(
+        at center center,
+        rgba(255,255,255,0.3) 0%,
+        rgba(255,255,255,0.0) 80%
+      );
+      @include box-shadow(
+                 0    0 25px rgba(247, 207,  61, .8),
+                 0    0  5px rgba(237, 232, 151, .9),
+        inset    0  1px  1px rgba(247, 207,  61, .6),
+        inset    0 -1px  1px rgba(247, 207,  61, .6),
+        inset  1px    0  1px rgba(247, 207,  61, .6),
+        inset -1px    0  1px rgba(247, 207,  61, .6),
+        inset    0  2px  1px rgba(237, 232, 151, .3),
+        inset    0 -2px  1px rgba(237, 232, 151, .3),
+        inset  2px    0  1px rgba(237, 232, 151, .3),
+        inset -2px    0  1px rgba(237, 232, 151, .3),
+        inset    0 -2px  5px rgba(237, 232, 151, .3) );
+      @include animation(DownloadBtnBeat 1.7s 0.42s infinite);
+    }
+  }
+
+  #download-tabs{
+    border-bottom:4px solid #333;
+    overflow:visible;
+  }
+  #download-tabs>span::before,
+  #download-links th::before{
+    display:inline-block;
+    height:100%;
+    line-height:100%;
+    width:1.2em;
+    content:$ZWS;
+    background-size:1em 1em;
+    background-repeat:no-repeat;
+  }
+  #download-tabs>span{
+    display:inline-block;
+    width:29%;
+    text-align:center;
+    cursor:pointer;
+    overflow:visible;
+    color:rgb(125,125,125);
+    border-bottom:4px solid rgba(239, 227, 50,0);
+    @include transform( translate3d(0,4px,0) );
+    @include transition(all 0.3s ease);
+  }
+  #download-links td>a{
+    display:inline-block;width:100%;
+    @include transition(all 0.3s ease);
+  }
+  #download-links td>a:hover{
+    padding-left:0.5em;
+    border-left:4px solid rgba(239, 227, 50,1);
+  }
+  #download-tabs>span:nth-child(1)::before{background-image:url("../images/icon-windows.png");}
+  #download-tabs>span:nth-child(2)::before{background-image:url("../images/icon-mac.png");}
+  #download-tabs>span:nth-child(3)::before{background-image:url("../images/icon-linux.png");}
+  #download-links th:nth-child(1)::before{background-image:url("../images/mainsite-github.png");}
+  #download-links th:nth-child(2)::before{background-image:url("../images/huawei.png");}
+  #download-links th:nth-child(3)::before{background-image:url("../images/baidu.png");}
+
+  #download-links{position:relative;height:8em;}
+  #download-links>section{
+    position:absolute;
+    width:100%;
+    height:0em;
+
+    text-align:center;
+    opacity:0;
+    @include transform-origin(top center);
+    @include transform( rotateX(90deg) translate3d(0,-3em,0) );
+    @include transition(all 0.6s cubic-bezier(.7,2.2,.72,.6) 0s);
+
+  }
+  #download-tabs>span.active{
+    width:40%;
+    font-weight:bold;
+    color:rgb(255,255,255);
+    border-bottom:4px solid rgb(239, 227, 50);
+  }
+  #download-links>section.active{
+    height:8em;
+    opacity:1;
+    @include transform( rotateX(0deg) translate3d(0,0em,0) );
+  }
+  // #title
+
+  //kjumper for Delelopers page
+  #kjumper-box{
+    position:relative;
+  }
+  #kjumper-list{
+    @include display_flex;
+    position:absolute;
+    left:0;
+    top:-.6em;
+    width:100%;
+    text-align:center;
+    justify-content: space-around;
+  }
+  #kjumper-list>li{
+    display:inline-block;
+    width:100%;
+    padding:1em 0 .5em;
+    background-color: rgba(0,0,0,.3);
+    &:hover{background: rgba(0,0,0,1);}
+    &:nth-child(even){
+      transform: skewY(3deg);
+      &>a{
+        display: inline-block;
+        transform: skewY(-3deg);
+      }
+    }
+    &:nth-child(odd){
+      transform: skewY(-3deg);
+      &>a{
+        display: inline-block;
+        transform: skewY(3deg);
+      }
+    }
+  }
+
+  .kjumper-container{
+    top:0;
+    left:0;
+    width:100%;
+    opacity:0;
+    @include transform(translate3d(0,5em,0) scaleX(0.6));
+    @include transform-origin(top center);
+    @include transition(all 0.7s ease);
+  }
+  .kjumper-container.inactive{
+    z-index:-1;
+    pointer-events:none;
+    position:absolute;
+    opacity:0;
+    @include transform(translate3d(0,5em,0) scaleX(0.6));
+  }
+  .kjumper-container.active{
+    position:static;
+    opacity:1;
+    @include transform(translate3d(0,0em,0) scaleX(1));
+  }
+}
+
+
+/*============================*/
+/*specify styles features page*/
+/*============================*/
+
+#features-page{
+  #title{overflow:visible;}
+  #title>section{
+    min-height:439.5px;
+    overflow:visible;
+    padding-top:30px;
+  }
+
+
+  /*===============born-for-music=================*/
+  #born-for-music{overflow:visible;}
+  #born-for-music:before-active{}
+  #born-for-music:now-active{}
+  #born-for-music:after-active{}
+  #mu-logo{
+    display:block;
+    margin:73.25px auto;
+    height:474.775px;
+    @include transition(all 0.6s ease);
+  }
+  #born-for-music.after-active #mu-logo{
+    height:311.995px;
+    @include transform(translate3d(-203.475px,439.5px,0));
+  }
+
+
+  /*===============lossless=================*/
+  #lossless{
+    padding-left:542.6px;
+    overflow:visible;
+  }
+  #lossless>p,
+  #lossless>h2{text-align:left;}
+  .music-tags{
+    position:absolute;
+    width:98px;
+    height:49px;
+    margin:1em;
+    @include transition(all 1s ease);
+  }
+  #music-tag1{background-image:url("../images/music-tags.png");background-position:  -4px  -4px;}
+  #music-tag2{background-image:url("../images/music-tags.png");background-position:-108px  -4px;}
+  #music-tag3{background-image:url("../images/music-tags.png");background-position:-211px  -4px;}
+  #music-tag4{background-image:url("../images/music-tags.png");background-position:-314px  -4px;}
+  #music-tag5{background-image:url("../images/music-tags.png");background-position:  -4px -58px;}
+  #music-tag6{background-image:url("../images/music-tags.png");background-position:-108px -58px;}
+  #music-tag7{background-image:url("../images/music-tags.png");background-position:-211px -58px;}
+  #music-tag8{background-image:url("../images/music-tags.png");background-position:-314px -58px;}
+
+  #lossless.before-active .music-tags{opacity:0;}
+  #lossless.before-active #music-tag1{@include transform(translate3d(-678.25px, 146.5px,0));}
+  #lossless.before-active #music-tag2{@include transform(translate3d(-1085.2px, 293px,0));}
+  #lossless.before-active #music-tag3{@include transform(translate3d(-1085.2px, 314.975px,0));}
+  #lossless.before-active #music-tag4{@include transform(translate3d(-678.25px, 175.8px,0));}
+  #lossless.before-active #music-tag5{@include transform(translate3d(-1356.5px, -168.475px,0));}
+  #lossless.before-active #music-tag6{@include transform(translate3d(-1356.5px, -263.7px,0));}
+  #lossless.before-active #music-tag7{@include transform(translate3d(-678.25px, -476.125px,0));}
+  #lossless.before-active #music-tag8{@include transform(translate3d(-678.25px, -314.975px,0));}
+
+  #lossless.now-active .music-tags{opacity:1;}
+  #lossless.now-active #music-tag1{@include transform(translate3d(-556.165px,-139.175px,0));}//FLAC
+  #lossless.now-active #music-tag2{@include transform(translate3d(-556.165px,-271.025px,0));}//WAV
+  #lossless.now-active #music-tag3{@include transform(translate3d(-447.645px,-271.025px,0));}//WMA
+  #lossless.now-active #music-tag4{@include transform(translate3d(-556.165px,-73.25px,0));}//M4A
+  #lossless.now-active #music-tag5{@include transform(translate3d(-447.645px,-139.175px,0));}//AAC
+  #lossless.now-active #music-tag6{@include transform(translate3d(-556.165px,-205.1px,0));}//OGG
+  #lossless.now-active #music-tag7{@include transform(translate3d(-447.645px,-73.25px,0));}//ALAC
+  #lossless.now-active #music-tag8{@include transform(translate3d(-447.645px,-205.1px,0));}//AIFF
+
+  #lossless.after-active .music-tags{opacity:0;}
+  #lossless.after-active #music-tag1{@include transform(translate3d(556.165px,-139.175px,0));}//FLAC
+  #lossless.after-active #music-tag2{@include transform(translate3d(556.165px,-271.025px,0));}//WAV
+  #lossless.after-active #music-tag3{@include transform(translate3d(447.645px,-271.025px,0));}//WMA
+  #lossless.after-active #music-tag4{@include transform(translate3d(556.165px,-73.25px,0));}//M4A
+  #lossless.after-active #music-tag5{@include transform(translate3d(447.645px,-139.175px,0));}//AAC
+  #lossless.after-active #music-tag6{@include transform(translate3d(556.165px,-205.1px,0));}//OGG
+  #lossless.after-active #music-tag7{@include transform(translate3d(447.645px,-73.25px,0));}//ALAC
+  #lossless.after-active #music-tag8{@include transform(translate3d(447.645px,-205.1px,0));}//AIFF
+
+  /*===============enjoy-concert=================*/
+  #enjoy-concert{
+    padding-right:542.6px;
+	padding-top:70px !important;
+    overflow:visible;
+  }
+  #enjoy-concert>h2,
+  #enjoy-concert>p{text-align:left;}
+  .preview-pcs{
+    position:absolute;
+    @include transition(all 1s ease);
+  }
+  #preview-mac  {width:379.82px;}
+  #preview-linux{width:339.125px;}
+  #preview-win  {width:180.215px;}
+
+  #enjoy-concert.before-active .preview-pcs{opacity:0;}
+  #enjoy-concert.before-active #preview-mac  {@include transform( translate3d(737.555px,-229.05px,0) );}
+  #enjoy-concert.before-active #preview-linux{@include transform( translate3d(813.9px,-1.975px,0)  );}
+  #enjoy-concert.before-active #preview-win  {@include transform( translate3d(949.55px,-199.75px,0) );}
+
+  #enjoy-concert.now-active .preview-pcs{opacity:1;}
+  #enjoy-concert.now-active #preview-mac  {@include transform( translate3d(622.6px,-312.425px,0) );}
+  #enjoy-concert.now-active #preview-linux{@include transform( translate3d(732.51px,-136.975px,0)  );}
+  #enjoy-concert.now-active #preview-win  {@include transform( translate3d(556.165px,-75.925px,0)   );}
+
+
+  #enjoy-concert.after-active .preview-pcs{opacity:0;}
+  #enjoy-concert.after-active #preview-mac  {@include transform( translate3d(622.6px,-612.425px,0));}
+  #enjoy-concert.after-active #preview-linux{@include transform( translate3d(732.51px,-612.425px,0) );}
+  #enjoy-concert.after-active #preview-win  {@include transform( translate3d(556.165px,-612.425px,0)  );}
+
+  #open-source{
+    overflow:visible;
+    @include transition(all 1s ease);
+    padding-left:542.6px;
+	padding-top:50px !important;
+  }
+  #open-source-logo{
+    @include transition(all 1s ease);
+    @include transform-origin(center center);
+    position:absolute;
+    width:271.3px;
+  }
+  .opensource-logos{
+    @include transition(all 1s ease);
+    position:absolute;
+    width:135.65px;
+  }
+  #ffmpeg-logo  {width:100px;}
+  #qt-logo {width:100px;}
+  #vlc-logo  {width:100px;}
+
+  #open-source.before-active #open-source-logo{@include transform( translate3d(-678.25px,-219.75px,0) );opacity:0;}
+  #open-source.before-active #ffmpeg-logo     {@include transform( translate3d(-542.6px,146.5px,0)  );opacity:0;}
+  #open-source.before-active #qt-logo         {@include transform( translate3d(-447.645px,36.625px,0)   );opacity:0;}
+  #open-source.before-active #vlc-logo        {@include transform( translate3d(-162.78px,109.875px,0)  );opacity:0;}
+
+  #open-source.now-active    #open-source-logo{@include transform( translate3d(-406.95px,-219.75px,0) );opacity:1;}
+  #open-source.now-active    #ffmpeg-logo     {@include transform( translate3d(-527.645px,-103.25px,0) );opacity:1;}
+  #open-source.now-active    #qt-logo         {@include transform( translate3d(-471.255px,-63.25px,0) );opacity:1;}
+  #open-source.now-active    #vlc-logo        {@include transform( translate3d(-421.3px,-3.25px,0) );opacity:1;}
+
+  #open-source.after-active  #open-source-logo{@include transform( translate3d(-406.95px,-219.75px,0) );opacity:1;}
+  #open-source.after-active  #ffmpeg-logo     {@include transform( translate3d(-527.645px,-366.25px,0) );opacity:0;}
+  #open-source.after-active  #qt-logo         {@include transform( translate3d(-471.255px,-366.25px,0) );opacity:0;}
+  #open-source.after-active  #vlc-logo        {@include transform( translate3d(-421.3px,-366.25px,0) );opacity:0;}
+
+}

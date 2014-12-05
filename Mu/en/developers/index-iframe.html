@@ -1,0 +1,101 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="shortcut icon" href="../../favicon.png" type="image/x-icon" />
+    <title>Kreogist μ - Build μ Together</title>
+    <link rel="stylesheet" href="../../stylesheets/styles.css">
+    <link rel="stylesheet" href="../../stylesheets/pygment_trac.css">
+    <script type="text/javascript" src="../../javascripts/respond.js"></script>
+    <script type="text/javascript" src="../../javascripts/classie.js"></script>
+    <script type="text/javascript" src="../javascripts/kaji.js"></script>
+    <script type="text/javascript" src="../javascripts/kdevgen.js"></script>
+    <script type="text/javascript" src="../../javascripts/kcommon.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+    <script>kaji.writeBanner("../", "developers/index.html")</script>
+    <div class="wrapper">
+        <div id="title">
+          <ul id="kjumper-list">
+            <script type="text/javascript">
+              kdevgen.writeDevItems();
+            </script>
+          </ul>
+          <iframe src="" id="kjumper-receiver" style="position:absolute;top:0;left:0;width:0;height:0;opacity:0;"></iframe>
+          <div id="kjumper-box">
+          <div src="" class="kjumper-container active"></div>
+          <div src="" class="kjumper-container inactive"></div>
+          </div>
+          <footer>
+            <script>kaji.writeFooter("../");</script>
+          </footer>
+        </div>
+    </div>
+
+    <!--add parallax effect-->
+    <div id="parallax-fore"></div>
+    <script type="text/javascript">
+      parallaxIt.init();
+    </script>
+    <script type="text/javascript">
+      (function(){
+
+        var jumpList = Array.prototype.slice.call( document.querySelectorAll(".kjumper-link") );
+        var boxox = document.getElementById("kjumper-receiver");
+        var nextContext    = document.querySelector(".kjumper-container.inactive");
+        var presentContext = document.querySelector(".kjumper-container.active");
+
+        function bindEvent(){
+          jumpList = Array.prototype.slice.call( document.querySelectorAll(".kjumper-link") );
+          for (var i = jumpList.length - 1;i >= 0;--i) {
+            (function(){
+              var j = i;
+              jumpList[j].addEventListener("click",function(){
+                                                  boxox.setAttribute ("src", jumpList[j].getAttribute("data-url")) ;
+              });
+            })(i);
+          }
+        }
+        function iframeLoaded(){
+          nextContext.innerHTML = boxox.contentWindow.document.documentElement.innerHTML;
+          classModer.unsetClass("inactive",nextContext);
+          classModer.setClass("inactive",presentContext);
+          classModer.setActive(nextContext);
+          classModer.unsetActive(presentContext);
+          nextContext    = document.querySelector(".kjumper-container.inactive");
+          presentContext = document.querySelector(".kjumper-container.active");
+          bindEvent();
+        }
+
+        function parseURL () {
+          var splitter=window.location.href.lastIndexOf("#");
+          if (splitter==-1) {
+              boxox.setAttribute ("src", "index_content.html");
+          }
+          else {
+              boxox.setAttribute ("src", kdevgen.urlToFilename(window.location.href.substring(splitter+1)));
+          }
+        }
+
+        function init() {
+          boxox.onload = iframeLoaded;
+          bindEvent();
+          window.addEventListener("popstate", parseURL);
+        }
+
+        init();
+        parseURL();
+      })();
+    </script>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+  </body>
+</html>

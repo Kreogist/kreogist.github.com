@@ -1,0 +1,82 @@
+
+//Animation keyframes definition
+
+@include keyframes(DownloadBtnBeat){
+  //4 Beats,the last beat is a heavy beat;
+  //      Quick Reference
+  //BPM (bpm) ---- animation duration time (second):
+  //       60 ---- 4
+  //       70 ---- 3.43
+  //       90 ---- 2.67
+  //      120 ---- 2
+  //      140 ---- 1.71
+  //      160 ---- 1.5
+  //      180 ---- 1.3
+  //      190 ---- 1.26
+  //      200 ---- 1.2
+  //      220 ---- 1.09
+  //      240 ---- 1
+  //================================
+
+  0%     {@include transform( scale3d(   1,    1,    1) );}// Key
+
+  12%    {@include transform( scale3d(1.05, 1.05, 1.05) );}// Key,light beat
+
+  25%    {@include transform( scale3d(   1,    1,    1) );}// Key
+
+  37%    {@include transform( scale3d(1.05, 1.05, 1.05) );}// Key,light beat
+
+  50%    {@include transform( scale3d(   1,    1,    1) );}// Key
+
+  62%    {@include transform( scale3d(1.05, 1.05, 1.05) );}// Key,light beat
+
+  75%    {@include transform( scale3d(   1,    1,    1) );}// Key
+
+  77%    {
+    @include transform( scale3d(   1,    1,    1) );
+    @include box-shadow(0    0 25px rgba(247, 207,  61, .8),
+                        0    0  5px rgba(237, 232, 151, .9),
+                        inset    0  1px  1px rgba(247, 207,  61, .6),
+                        inset    0 -1px  1px rgba(247, 207,  61, .6),
+                        inset  1px    0  1px rgba(247, 207,  61, .6),
+                        inset -1px    0  1px rgba(247, 207,  61, .6),
+                        inset    0  2px  1px rgba(237, 232, 151, .3),
+                        inset    0 -2px  1px rgba(237, 232, 151, .3),
+                        inset  2px    0  1px rgba(237, 232, 151, .3),
+                        inset -2px    0  1px rgba(237, 232, 151, .3),
+                        inset    0 -2px  5px rgba(237, 232, 151, .3) );
+    color:rgb(237, 232, 151);
+  }
+  87%    {                                                // Key,heavy beat
+    @include transform( scale3d( 1.1,  1.1,  1.1) );
+    @include box-shadow(0    0 45px rgba(247, 207,  61, .8),
+                        0    0 15px rgba(237, 232, 151, .9),
+                        inset    0  1px  1px rgba(247, 207,  61, .6),
+                        inset    0 -1px  1px rgba(247, 207,  61, .6),
+                        inset  1px    0  1px rgba(247, 207,  61, .6),
+                        inset -1px    0  1px rgba(247, 207,  61, .6),
+                        inset    0  2px  1px rgba(237, 232, 151, .3),
+                        inset    0 -2px  1px rgba(237, 232, 151, .3),
+                        inset  2px    0  1px rgba(237, 232, 151, .3),
+                        inset -2px    0  1px rgba(237, 232, 151, .3),
+                        inset    0 -2px  5px rgba(237, 232, 151, .3) );
+    color:rgb(247, 207, 61);
+  }
+  96%    {
+    @include transform( scale3d(   1,    1,    1) );
+    @include box-shadow(0    0 25px rgba(247, 207,  61, .8),
+                        0    0  5px rgba(237, 232, 151, .9),
+                        inset    0  1px  1px rgba(247, 207,  61, .6),
+                        inset    0 -1px  1px rgba(247, 207,  61, .6),
+                        inset  1px    0  1px rgba(247, 207,  61, .6),
+                        inset -1px    0  1px rgba(247, 207,  61, .6),
+                        inset    0  2px  1px rgba(237, 232, 151, .3),
+                        inset    0 -2px  1px rgba(237, 232, 151, .3),
+                        inset  2px    0  1px rgba(237, 232, 151, .3),
+                        inset -2px    0  1px rgba(237, 232, 151, .3),
+                        inset    0 -2px  5px rgba(237, 232, 151, .3) );
+    color:rgb(237, 232, 151);
+  }
+
+  100%   {@include transform( scale3d(   1,    1,    1) );}// Key
+}

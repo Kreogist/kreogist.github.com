@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="shortcut icon" href="../../favicon.png" type="image/x-icon" />
+    <title>Kreogist μ - Build μ Together</title>
+    <link rel="stylesheet" href="../../stylesheets/styles.css">
+    <link rel="stylesheet" href="../../stylesheets/pygment_trac.css">
+    <script type="text/javascript" src="../../javascripts/respond.js"></script>
+    <script type="text/javascript" src="../../javascripts/classie.js"></script>
+    <script type="text/javascript" src="../javascripts/kaji.js"></script>
+    <script type="text/javascript" src="../javascripts/kdevgen.js"></script>
+    <script type="text/javascript" src="../../javascripts/kcommon.js"></script>
+    <script type="text/javascript" src="../../javascripts/kajax.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body>
+    <script>kaji.writeBanner("../", "developers/index.html")</script>
+    <div class="wrapper">
+        <div id="title">
+          <ul id="kjumper-list">
+            <script type="text/javascript">
+              kdevgen.writeDevItems();
+            </script>
+          </ul>
+          <div id="kjumper-box">
+          <div src="" class="kjumper-container active"></div>
+          <div src="" class="kjumper-container inactive"></div>
+          </div>
+          <footer>
+            <script>kaji.writeFooter("../");</script>
+          </footer>
+        </div>
+    </div>
+
+    <!--add parallax effect-->
+    <div id="parallax-fore"></div>
+    <script type="text/javascript">
+      parallaxIt.init();
+      kJumper.init();
+    </script>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+  </body>
+</html>

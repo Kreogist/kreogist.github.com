@@ -1,0 +1,46 @@
+
+//mixins
+@mixin box-shadow($args...){
+  -webkit-box-shadow:$args;
+     -moz-box-shadow:$args;
+       -o-box-shadow:$args;
+          box-shadow:$args;
+}
+@mixin transition($args...){
+  -webkit-transition:$args;
+     -moz-transition:$args;
+       -o-transition:$args;
+          transition:$args;
+}
+
+@mixin transform-origin($args...){
+  -webkit-transform-origin:$args;
+     -moz-transform-origin:$args;
+          transform-origin:$args;
+}
+
+@mixin transform($args...){
+  -webkit-transform:$args;
+     -moz-transform:$args;
+          transform:$args;
+}
+
+@mixin animation($animations...){
+  -webkit-animation:$animations;
+     -moz-animation:$animations;
+       -o-animation:$animations;
+          animation:$animations;
+}
+
+@mixin keyframes($animationName){
+  @-webkit-keyframes #{$animationName} {@content;}
+     @-moz-keyframes #{$animationName} {@content;}
+       @-o-keyframes #{$animationName} {@content;}
+          @keyframes #{$animationName} {@content;}
+}
+
+@mixin display_flex{
+  display:     -ms-flex;
+  display: -webkit-flex;
+  display:         flex;
+}

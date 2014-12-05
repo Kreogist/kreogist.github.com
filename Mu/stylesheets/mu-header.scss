@@ -1,0 +1,110 @@
+
+//header
+#header {
+  z-index: 999;
+  left: 0;
+  top: 0px;
+  height: 60px;
+  width: 100%;
+  position: fixed;
+  background: url(../images/nav-bg.gif) $clr-header-background;
+  border-bottom: 4px solid $clr-header-border;
+  @include box-shadow( 0px 1px 3px $clr-header-box-shadow );
+  #btn-menu{display:none;}
+  nav {
+    max-width: 1104px;
+    margin: 0 auto;
+    padding: 0 10px;
+    margin: 6px auto;
+
+    li {
+      font-family: $font-light;
+      font-weight: normal;
+      list-style: none;
+      display: inline;
+      color: white;
+      line-height: 50px;
+      text-shadow: 0px 1px 0px rgba(0, 0, 0, 0.2);
+      font-size: 14px;
+
+      &.icon{
+        float: left;
+        margin-left: 0px;
+        cursor:pointer;
+        &>img{width:40px;}
+      }
+
+      &.cat {
+        float: right;
+        margin-left: 0px;
+      }
+      &.active>a{
+        color:rgb(237, 232, 151);
+        font-weight:bold;
+        text-shadow:0 -1px 5px rgba(0,0,0,1);
+      }
+      &.active::after{
+        display:block;
+        content:$ZWS;
+        width:1em;
+        margin:0 auto 0;
+        height:0.3em;
+        background-color:rgb(239,227,50);
+        box-shadow:0     0  7px rgba(239,227,50,1),
+                   0  -5px  5px rgba(239,227,50,0.9),
+                   0 -15px 15px rgba(239,227,50,0.8),
+                   0 -25px 25px rgba(239,227,50,0.7),
+                   0 -45px 45px rgba(239,227,50,0.6)
+                   ;
+      }
+      //used ?============
+      &.downloads {
+        float: right;
+        margin-left: 6px;
+      }
+
+      &.title {
+        float: right;
+        margin-right: 10px;
+        font-size: 11px;
+      }
+      //==================
+
+      a {
+        color:#ddd;
+        padding:10px;
+        margin-top: 6px;
+        margin-right:0.2em;
+        line-height: 14px;
+        font-size: 14px;
+        display: inline-block;
+        text-align: center;
+        transition:all 0.3s ease-in-out;
+
+        &::after{
+          position:relative;
+          left:0;
+          content:"|";
+          opacity:0;
+          transition:all 0.2s ease-in-out;
+        }
+        &::before{
+          position:relative;
+          left:0;
+          content:"|";
+          opacity:0;
+          transition:all 0.2s ease-in-out;
+        }
+        &:hover::after{
+          left:10px;
+          opacity:1;
+        }
+        &:hover::before{
+          top:0;
+          left:-10px;
+          opacity:1;
+        }
+      }
+    }
+  }
+}

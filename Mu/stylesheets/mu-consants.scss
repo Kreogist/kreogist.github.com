@@ -1,0 +1,29 @@
+
+//Consants
+
+//Common Colors
+$clr-bodyforeground : #f0e7d5;
+$clr-bodybackground : #252525;
+$clr-headers : #e8e8e8;
+$clr-a : #f7cf3d;
+$clr-a-hover : lighten($clr-a,40%);
+$clr-blockquote-border : $clr-a;
+$clr-code-foreground : #efefef;
+$clr-pre-background : #191919;
+$clr-pre-border : #121212;
+$clr-table-border: #434343;
+$clr-th : #b6b6b6;
+$clr-dt : #F0E7D5;
+$clr-header-background : #353535;
+$clr-header-border : $clr-table-border;
+$clr-header-box-shadow : rgba(0, 0, 0, 0.25);
+
+//Fonts
+
+$font-regular:"OpenSansRegular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-light:'OpenSansLight', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-semibold:'OpenSansSemibold', "Helvetica Neue", Helvetica, Arial, sans-serif;
+$font-mono:"Lucida Sans", Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal;
+
+//Misc
+$ZWS:"\200B";//​​​​​​Zero Width Space

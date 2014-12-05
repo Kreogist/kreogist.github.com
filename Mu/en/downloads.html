@@ -1,0 +1,172 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon" />
+    <title>Kreogist μ - Your own media library</title>
+    <link rel="stylesheet" href="../stylesheets/styles.css">
+    <link rel="stylesheet" href="../stylesheets/pygment_trac.css">
+    <script type="text/javascript" src="../javascripts/respond.js"></script>
+    <script type="text/javascript" src="../javascripts/classie.js"></script>
+    <script type="text/javascript" src="javascripts/kaji.js"></script>
+    <script type="text/javascript" src="../javascripts/kcommon.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+  </head>
+  <body>
+    <script>kaji.writeBanner("", "downloads.html");</script>
+    <div class="wrapper">
+        <div id="title">
+          <section>
+            <h1>Get your own μ!</h1>
+            <p class="hints">μ is still in alpha stage, meaning it is not feature-complete and is recommended only for evaluation and testing purposes.</p>
+          </section>
+          <section id="download-content">
+            <script>
+            var osString = navigator.platform.toLowerCase();
+            if(osString.indexOf("win")>-1)
+            {
+              document.write("<a href=\"https://github.com/Kreogist/Mu/releases/download/0.1.1/mu_0.1_alpha_win32.zip\">"+
+                             "<p class=\"normal-font center-text\"><img src=\"../images/package_download.png\" /><br />μ for Windows (zip, 31.73MB)</p></a>"+
+                             "<section>"+
+                             "<h2 class=\"align-left\">Minimum System Requirements</h2>"+
+                             "<p class=\"align-left\">"+
+                             "  <ul>"+
+                             "    <li>A SSE3 supported CPU (Intel Pentium 4 HT (Prescott) / AMD Athlon 64 X2 or later).</li>"+
+                             "    <li>Minimum 70MB of available disk space.</li>"+
+                             "    <li>Microsoft(R) Windows XP SP2 or later.</li>"+
+                             "  </ul>"+
+                             "</p>"+
+                             "</section>");
+            }
+            else if(osString.indexOf("mac")>-1)
+      {
+                if(osString.indexOf("intel")>-1)
+        {
+                  document.write("<a href=\"http://pan.baidu.com/s/1qWLljYk\">"+
+                                 "<p class=\"normal-font center-text\"><img src=\"../images/package_download.png\" /><br />μ for Mac (zip, 104.7MB)</p></a>"+
+                                 "<section>"+
+                                 "<h2 class=\"align-left\">Minimum System Requirements</h2>"+
+                                 "<p class=\"align-left\">"+
+                                 "You need a Mac which can running OS X Lion (10.7) or later."+
+                                 "  <ul>"+
+                                 "    <li>Mac computer with an Intel Core Duo or later.</li>"+
+                                 "    <li>Minimum 80MB of available disk space.</li>"+
+                                 "    <li>OS X version 10.7 or later.</li>"+
+                                 "  </ul>"+
+                                 "</p>"+
+                                 "</section>");
+        }
+        else
+        {
+          document.write("<p class=\"normal-font center-text\">Sorry, but we have no μ for your Mac. </p>");
+        }
+      }
+      else
+            {
+              document.write("<p class=\"normal-font center-text\"><img src=\"../images/package_download_unavaliable.png\" /></p>")
+              document.write("<p class=\"normal-font center-text\">Sorry, but we have no μ for " + navigator.platform + " currently</p>");
+            }
+            </script>
+      </section>
+      <section id="download-others">
+        <h2 class="align-left">Download Other Binary Versions</h2>
+        <section id="download-tabs">
+          <span id="download-tab1" class="active">Windows</span>
+          <span id="download-tab2">Mac OS X</span>
+          <span id="download-tab3">Linux</span>
+        </section>
+        <section id="download-links">
+          <section id="download-links1" class="active">
+            <table>
+              <thead>
+                <tr>
+                  <th>Github</th>
+                  <th>Dbank</th>
+                  <th>Baidu</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><a href="https://github.com/Kreogist/Mu/releases/download/0.1.1/mu_0.1_alpha_win32.zip">zip</a></td>
+                  <td><a href="http://dl.vmall.com/c002spbok1">zip</a></td>
+                  <td><a href="http://pan.baidu.com/s/1F7Cgm">zip</a></td>
+                </tr>
+                <tr>
+                  <td><a href="https://github.com/Kreogist/Mu/releases/download/0.1.1/mu_0.1_alpha_win32.7z">7z</a></td>
+                  <td><a href="http://dl.vmall.com/c0ammeq2h3">7z</a></td>
+                  <td><a href="http://pan.baidu.com/s/1gd9XIX9">7z</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section id="download-links2">
+            <table>
+              <thead>
+                <tr>
+                  <th>Github</th>
+                  <th>Dbank</th>
+                  <th>Baidu</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td></td>
+                  <td></td>
+                  <td><a href="http://pan.baidu.com/s/1qWLljYk">zip</a></td>
+                </tr>
+              </tbody>
+            </table>
+          </section>
+          <section id="download-links3">
+              Comming Soon.
+          </section>
+        </section>
+      </section>
+      <section id="source-code">
+        <h2 class="align-left">Download Source Code</h2>
+        <p class="align-left">
+        Please visit our <a href="developers/index.html">Developers</a> page to get μ's source code.
+      </p>
+      </section>
+      <footer>
+        <script>kaji.writeFooter("");</script>
+      </footer>
+        </div>
+        <script type="text/javascript">
+        (function(){
+          //bind events to downlaod tabs.
+          var dlinks = Array.prototype.slice.call( document.querySelectorAll("#download-links>section") );
+          var dtabs  = Array.prototype.slice.call( document.querySelectorAll("#download-tabs>span") );
+
+          for (var i = 0;i < dtabs.length; ++i){
+            (function(){
+              var j = i;
+              dtabs[i].addEventListener("click",
+                                        function(){
+                                        dlinks.filter(function(el){ classie.remove(el,'active'); });
+                                        classie.add(dlinks[j],'active');
+                                        dtabs.filter(function(el){ classie.remove(el,'active'); });
+                                        classie.add(dtabs[j],'active');}
+                                        );
+            })();
+          }
+        })();
+        </script>
+    </div>
+
+    <!--add parallax effect-->
+    <div id="parallax-fore"></div>
+    <script type="text/javascript">
+      parallaxIt.init();
+    </script>
+
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+  </body>
+</html>
