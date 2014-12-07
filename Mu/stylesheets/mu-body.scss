@@ -207,8 +207,9 @@
     @include transform( rotateX(0deg) translate3d(0,0em,0) );
   }
   // #title
-
-  //kjumper for Delelopers page
+  /*============================*/
+  /*specify styles Delelopers page*/
+  /*============================*/
   #kjumper-box{
     position:relative;
   }
@@ -228,17 +229,17 @@
     background-color: rgba(0,0,0,.3);
     &:hover{background: rgba(0,0,0,1);}
     &:nth-child(even){
-      transform: skewY(3deg);
+      @include transform(skewY(3deg));
       &>a{
         display: inline-block;
-        transform: skewY(-3deg);
+        @include transform(skewY(-3deg));
       }
     }
     &:nth-child(odd){
-      transform: skewY(-3deg);
+      @include transform(skewY(-3deg));
       &>a{
         display: inline-block;
-        transform: skewY(3deg);
+        @include transform(skewY(3deg));
       }
     }
   }
