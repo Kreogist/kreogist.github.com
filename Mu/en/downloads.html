@@ -11,6 +11,7 @@
     <script type="text/javascript" src="../javascripts/classie.js"></script>
     <script type="text/javascript" src="javascripts/kaji.js"></script>
     <script type="text/javascript" src="../javascripts/kcommon.js"></script>
+    <script type="text/javascript" src="javascripts/kgendownload.js"></script>
     <!--[if lt IE 9]>
       <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
@@ -76,62 +77,7 @@
       </section>
       <section id="download-others">
         <h2 class="align-left">Download Other Binary Versions</h2>
-        <section id="download-tabs">
-          <span id="download-tab1" class="active">Windows</span>
-          <span id="download-tab2">Mac OS X</span>
-          <span id="download-tab3">Linux</span>
-        </section>
-        <section id="download-links">
-          <section id="download-links1" class="active">
-            <table>
-              <thead>
-                <tr>
-                  <th>Github</th>
-                  <th>Dbank</th>
-                  <th>Baidu</th>
-                  <th>Thunder</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>N/A</td>
-                  <td><a href="http://dl.vmall.com/c01mhpra73">zip</a></td>
-                  <td><a href="http://pan.baidu.com/s/1i37oPEl">zip</a></td>
-                  <td><a href="http://kuai.xunlei.com/d/eVA3AwJhBAD4FqVUa90">zip</a></td>
-                </tr>
-                <tr>
-                  <td>N/A</td>
-                  <td><a href="http://dl.vmall.com/c0tdekuwd6">7z</a></td>
-                  <td><a href="http://pan.baidu.com/s/1dDeWJst">7z</a></td>
-                  <td><a href="http://kuai.xunlei.com/d/eVA3AwJfBADXFqVU235">7z</a></td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-          <section id="download-links2">
-            <table>
-              <thead>
-                <tr>
-                  <th>Github</th>
-                  <th>Dbank</th>
-                  <th>Baidu</th>
-                  <th>Thunder</th>
-                </tr>
-              </thead>
-              <tbody>
-                <tr>
-                  <td>N/A</td>
-                  <td><a href="http://dl.vmall.com/c0a1x6wm0s">dmg</a></td>
-                  <td><a href="http://pan.baidu.com/s/1jGtF9Mu">dmg</a></td>
-                  <td><a href="http://kuai.xunlei.com/d/eVA3AwJpBADbF6VUadb">dmg</a></td>
-                </tr>
-              </tbody>
-            </table>
-          </section>
-          <section id="download-links3">
-              Comming Soon.
-          </section>
-        </section>
+        <script>kgendonwload.writeDownloadList()</script>
       </section>
       <section id="resources">
         <h2 class="align-left">Download Resources</h2>
