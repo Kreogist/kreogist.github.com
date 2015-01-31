@@ -9,7 +9,7 @@ var kgendonwload = new function(){
       'Github',
       'Dbank',
       'Baidu',
-      'Thunder'
+      'SourceForge'
     ];
     var lPackageType = [
         'zip',
@@ -22,12 +22,12 @@ var kgendonwload = new function(){
         [0, 0, 0]
     ];
     var lDownloadLinks = [
-        [['', 'http://dl.vmall.com/c01mhpra73', 'http://pan.baidu.com/s/1i37oPEl', 'http://kuai.xunlei.com/d/eVA3AwJhBAD4FqVUa90'],
-         ['', 'http://dl.vmall.com/c0tdekuwd6', 'http://pan.baidu.com/s/1dDeWJst', 'http://kuai.xunlei.com/d/eVA3AwJfBADXFqVU235'],
+        [['', 'http://dl.vmall.com/c0wqcvaa4c', 'http://pan.baidu.com/s/1i3w0tTV', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.6/Windows/mu_0.6_3af723e.zip/download'],
+         ['', 'http://dl.vmall.com/c09zfb8n6y', 'http://pan.baidu.com/s/1bnuAGsZ', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.6/Windows/mu_0.6_3af723e.7z/download'],
          ['', '', '', '']],
         [['', '', '', ''],
          ['', '', '', ''],
-         ['', 'http://dl.vmall.com/c0a1x6wm0s', 'http://pan.baidu.com/s/1jGtF9Mu', 'http://kuai.xunlei.com/d/eVA3AwJpBADbF6VUadb']],
+         ['', 'http://dl.vmall.com/c0ntv7n0uo', 'http://pan.baidu.com/s/1bn2IjNp', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.6/Mac/mu_0.6_3af723e.app.zip/download']],
         [['', '', '', ''],
          ['', '', '', ''],
          ['', '', '', '']]
