@@ -14,7 +14,7 @@
     var lPackageType = [
         'zip',
         '7z',
-        'dmg',
+        'app.zip',
     ];
     var lAvailablePackageType =[
         [1, 1, 0],
