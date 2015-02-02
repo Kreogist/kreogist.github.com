@@ -28,54 +28,9 @@
             <h1>Get your own μ!</h1>
           </section>
           <section id="download-content">
-            <script>
-            var osString = navigator.platform.toLowerCase();
-            if(osString.indexOf("win")>-1)
-            {
-              document.write("<a href=\"http://pan.baidu.com/s/1bnuAGsZ\">"+
-                             "<p class=\"normal-font center-text\"><img src=\"../images/package_download.png\" /><br />μ for Windows (7z, 27.7 MB)</p></a>"+
-                             "<section>"+
-                             "<h2 class=\"align-left\">Minimum System Requirements</h2>"+
-                             "<p class=\"align-left\">"+
-                             "  <ul>"+
-                             "    <li>A SSE3 supported CPU. (A Pentium® 4 HT or later/AMD Athlon 64 X2 or later)</li>"+
-                             "    <li>Minimum 170MB of available disk space.</li>"+
-                             "    <li>Microsoft(R) Windows XP SP2 or later.</li>"+
-                             "  </ul>"+
-                             "</p>"+
-                             "</section>");
-            }
-            else if(osString.indexOf("mac")>-1)
-            {
-                if(osString.indexOf("intel")>-1)
-                {
-                  document.write("<a href=\"http://pan.baidu.com/s/1bn2IjNp\">"+
-                                 "<p class=\"normal-font center-text\"><img src=\"../images/package_download.png\" /><br />μ for Mac (zip, 35.2 MB)</p></a>"+
-                                 "<section>"+
-                                 "<h2 class=\"align-left\">Minimum System Requirements</h2>"+
-                                 "<p class=\"align-left\">"+
-                                 "You need a Mac which can running OS X Lion (10.7) or later."+
-                                 "  <ul>"+
-                                 "    <li>Mac computer with an Intel Core Duo or later.</li>"+
-                                 "    <li>Minimum 140MB of available disk space.</li>"+
-                                 "    <li>OS X version 10.7 or later.</li>"+
-                                 "  </ul>"+
-                                 "</p>"+
-                                 "</section>");
-                }
-                else
-                {
-                    document.write("<p class=\"normal-font center-text\">Sorry, but we have no μ for your Mac. </p>");
-                }
-            }
-            else
-            {
-              document.write("<p class=\"normal-font center-text\"><img src=\"../images/package_download_unavaliable.png\" /></p>")
-              document.write("<p class=\"normal-font center-text\">Sorry, but we have no μ for " + navigator.platform + " currently</p>");
-            }
-            </script>
-      </section>
-      <section id="download-others">
+            <script>kgendonwload.writePrefer()</script>
+          </section>
+            <section id="download-others">
         <h2 class="align-left">Download Other Binary Versions</h2>
         <script>kgendonwload.writeDownloadList()</script>
       </section>

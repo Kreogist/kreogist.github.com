@@ -28,52 +28,7 @@
             <h1>获得属于你自己的 μ！</h1>
           </section>
           <section id="download-content">
-            <script>
-            var osString = navigator.platform.toLowerCase();
-            if(osString.indexOf("win")>-1)
-            {
-              document.write("<a href=\"http://pan.baidu.com/s/1bnuAGsZ\">"+
-                             "<p class=\"normal-font center-text\"><img src=\"../images/package_download.png\" /><br />适用于 Windows 的 μ（7z，27.7 MB）</p></a>"+
-                             "<section>"+
-                             "<h2 class=\"align-left\">最低系统需求</h2>"+
-                             "<p class=\"align-left\">"+
-                             "  <ul>"+
-                             "    <li>一个支持SSE3指令集的CPU。（Pentium® 4 HT或更新、AMD Athlon 64 X2或更新）</li>"+
-                             "    <li>170 MB 的可用磁盘空间。</li>"+
-                             "    <li>Microsoft® Windows XP SP2 或更新版本的 Windows 操作系统。</li>"+
-                             "  </ul>"+
-                             "</p>"+
-                             "</section>");
-            }
-            else if(osString.indexOf("mac")>-1)
-      {
-                if(osString.indexOf("intel")>-1)
-        {
-                  document.write("<a href=\"http://pan.baidu.com/s/1bn2IjNp\">"+
-                                 "<p class=\"normal-font center-text\"><img src=\"../images/package_download.png\" /><br />适用于 Mac OS X 的 μ（zip，35.2 MB）</p></a>"+
-                                 "<section>"+
-                                 "<h2 class=\"align-left\">最低系统需求</h2>"+
-                                 "<p class=\"align-left\">"+
-                                 "你需要一台能够运行 OS X Lion（10.7）的 Mac。"+
-                                 "  <ul>"+
-                                 "    <li>配有英特尔®酷睿™或更新版本处理器的 Mac 。</li>"+
-                                 "    <li>140 MB 的可用磁盘空间。</li>"+
-                                 "    <li>OS X 10.7 或者更新的版本。</li>"+
-                                 "  </ul>"+
-                                 "</p>"+
-                                 "</section>");
-        }
-        else
-        {
-          document.write("<p class=\"normal-font center-text\">很抱歉，但是 μ 不支持您使用的 Mac 系统。</p>");
-        }
-      }
-      else
-            {
-              document.write("<p class=\"normal-font center-text\"><img src=\"../images/package_download_unavaliable.png\" /></p>")
-              document.write("<p class=\"normal-font center-text\">很抱歉，但是我们目前没有支持您系统的 μ 。</p>");
-            }
-            </script>
+            <script>kgendonwload.writePrefer()</script>
       </section>
       <section id="download-others">
         <h2 class="align-left">下载其它版本</h2>
