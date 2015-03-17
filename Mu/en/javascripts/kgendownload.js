@@ -20,10 +20,10 @@ var kgendonwload = new function(){
                     'deb'
                 ];
         var lPackageSize = [
-                    '26.8 MB',
-                    '19.2 MB',
-                    '',
-                    '',
+                    '24.8 MB',
+                    '17.9 MB',
+                    '26.4 MB',
+                    '19.1 MB',
                     '14.3 MB',
                     '1.3 MB'
                 ];
@@ -33,12 +33,12 @@ var kgendonwload = new function(){
                     [0, 0, 0, 0, 0, 1]
                 ];
         var lDownloadLinks = [
-                    ['', 'http://dl.vmall.com/c0i6pk3viq', 'http://pan.baidu.com/s/1bno55Av', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.7/Windows/mu_0.7_a3b0058.zip/download'],
-                    ['', 'http://dl.vmall.com/c0fadqi2xx', 'http://pan.baidu.com/s/1pJjxw5X', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.7/Windows/mu_0.7_a3b0058.7z/download'],
-                    ['', '', '', '',],
-                    ['', '', '', '',],
-                    ['', 'http://dl.vmall.com/c0us8qmkcs', 'http://pan.baidu.com/s/1c0CkfwG', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.7/Mac/mu_0.7_a3b0058.app.zip/download'],
-                    ['', 'http://dl.vmall.com/c0qgmse3co', 'http://pan.baidu.com/s/1dDAMiml', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.7/Linux/mu_0.7_a3b0058.deb/download']
+                    ['', '', 'http://pan.baidu.com/s/1hqszX2G', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/0.8/Windows/mu_0.8_x86_d8f9b24.zip/download'],
+                    ['', '', 'http://pan.baidu.com/s/1bndHgGR', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.8/Windows/mu_0.8_x86_d8f9b24.7z/download'],
+                    ['', '', 'http://pan.baidu.com/s/1c00FCty', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.8/Windows/mu_0.8_x64_d8f9b24.zip/download'],
+                    ['', '', 'http://pan.baidu.com/s/1i3vLMmD', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.8/Windows/mu_0.8_x64_d8f9b24.7z/download'],
+                    ['', '', 'http://pan.baidu.com/s/1pJ7KK8V', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.8/Mac/mu_0.8_d8f9b24.app.zip/download'],
+                    ['', '', 'http://pan.baidu.com/s/1bno60mr', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.8/Linux/mu_0.8_d8f9b24.deb/download']
                 ];
 
         this.getPackageSize = function(type) {
