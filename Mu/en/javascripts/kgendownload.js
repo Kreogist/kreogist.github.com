@@ -12,25 +12,31 @@ var kgendonwload = new function(){
                     'SourceForge'
                 ];
         var lPackageType = [
-                    'zip',
-                    '7z',
+                    'zip (32-bit)',
+                    '7z (32-bit)',
+                    'zip (64-bit)',
+                    '7z (64-bit)',
                     'app.zip',
                     'deb'
                 ];
         var lPackageSize = [
                     '26.8 MB',
                     '19.2 MB',
+                    '',
+                    '',
                     '14.3 MB',
                     '1.3 MB'
                 ];
         var lAvailablePackageType =[
-                    [1, 1, 0, 0],
-                    [0, 0, 1, 0],
-                    [0, 0, 0, 1]
+                    [1, 1, 1, 1, 0, 0],
+                    [0, 0, 0, 0, 1, 0],
+                    [0, 0, 0, 0, 0, 1]
                 ];
         var lDownloadLinks = [
                     ['', 'http://dl.vmall.com/c0i6pk3viq', 'http://pan.baidu.com/s/1bno55Av', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.7/Windows/mu_0.7_a3b0058.zip/download'],
                     ['', 'http://dl.vmall.com/c0fadqi2xx', 'http://pan.baidu.com/s/1pJjxw5X', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.7/Windows/mu_0.7_a3b0058.7z/download'],
+                    ['', '', '', '',],
+                    ['', '', '', '',],
                     ['', 'http://dl.vmall.com/c0us8qmkcs', 'http://pan.baidu.com/s/1c0CkfwG', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.7/Mac/mu_0.7_a3b0058.app.zip/download'],
                     ['', 'http://dl.vmall.com/c0qgmse3co', 'http://pan.baidu.com/s/1dDAMiml', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.7/Linux/mu_0.7_a3b0058.deb/download']
                 ];
