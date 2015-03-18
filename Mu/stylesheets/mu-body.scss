@@ -141,7 +141,13 @@
       @include animation(DownloadBtnBeat 1.7s 0.42s infinite);
     }
   }
-
+  #download-prefer{
+    text-align:center;
+  }
+  #download-prefer>a{
+    display:inline-block;
+    margin:0 1em;
+  }
   #download-tabs{
     border-bottom:4px solid #333;
     overflow:visible;

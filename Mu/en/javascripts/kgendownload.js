@@ -134,12 +134,14 @@ var kgendonwload = new function(){
         if(osString.indexOf("win")>-1)
         {
             //Windows platform.
-            document.write("<a href=\"" +
+            document.write('<section id="download-prefer">' +
+                           "<a href=\"" +
                            oLinkGenerator.getDownloadLink('7z', 'SourceForge') +
                            "\">" +
                            "<p class=\"normal-font center-text\"><img src=\"../images/package_download.png\" /><br />μ for Windows (7z, "+
                            oLinkGenerator.getPackageSize('7z')+
-                           ")</p></a><section>" +
+                           ")</p></a></section>" +
+                           "<section>" +
                            "<h2 class=\"align-left\">Minimum System Requirements</h2>"+
                            "<p class=\"align-left\">"+
                            "  <ul>"+
@@ -155,12 +157,13 @@ var kgendonwload = new function(){
             if(osString.indexOf("intel")>-1)
             {
                 //Mac OS X with Intel processor.
-                document.write("<a href=\""+
+                document.write('<section id="download-prefer">' +
+                               "<a href=\""+
                                oLinkGenerator.getDownloadLink('app.zip', 'SourceForge') +
                                "\">"+
                                "<p class=\"normal-font center-text\"><img src=\"../images/package_download.png\" /><br />μ for Mac (.app.zip, "+
                                oLinkGenerator.getPackageSize('app.zip')+
-                               ")</p></a>"+
+                               ")</p></a></section>"+
                                "<section>"+
                                "<h2 class=\"align-left\">Minimum System Requirements</h2>"+
                                "<p class=\"align-left\">"+
@@ -183,12 +186,14 @@ var kgendonwload = new function(){
             if(osString.indexOf("x86_64")>-1)
             {
                 //Linux x86_64 platform.
-                document.write("<a href=\"" +
+                document.write('<section id="download-prefer">' +
+                               "<a href=\"" +
                                oLinkGenerator.getDownloadLink('deb', 'SourceForge') +
                                "\">" +
                                "<p class=\"normal-font center-text\"><img src=\"../images/package_download.png\" /><br />μ for Linux x86_64 (deb, "+
                                oLinkGenerator.getPackageSize('deb')+
-                               ")</p></a><section>" +
+                               ")</p></a></section>" +
+                               "<section>" +
                                "<h2 class=\"align-left\">Minimum System Requirements</h2>"+
                                "<p class=\"align-left\">"+
                                "  <ul>"+

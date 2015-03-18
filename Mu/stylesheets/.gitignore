@@ -1,2 +1,8 @@
 #sass cache file
-.sass-cache/
+*.sass-cache/
+
+#sass map
+/*.css.map
+
+#bak
+/*.bak
