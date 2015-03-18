@@ -12,10 +12,10 @@
                     'SourceForge'
                 ];
         var lPackageType = [
-                    'zip (32-bit)',
-                    '7z (32-bit)',
-                    'zip (64-bit)',
-                    '7z (64-bit)',
+                    'zip（32位）',
+                    '7z（32位）',
+                    'zip（64位）',
+                    '7z（64位）',
                     'app.zip',
                     'deb'
                 ];
@@ -136,11 +136,18 @@
             //Windows platform.
             document.write('<section id="download-prefer">' +
                            "<a href=\"" +
-                           oLinkGenerator.getDownloadLink('7z', '百度云') +
+                           oLinkGenerator.getDownloadLink('7z（32位）', '百度云') +
                            "\">" +
-                           "<p class=\"normal-font center-text\"><img src=\"../images/package_download.png\" /><br />适用于 Windows 的 μ（7z，"+
-                           oLinkGenerator.getPackageSize('7z')+
-                           "）</p></a></section>" +
+                           "<p class=\"normal-font center-text\"><img src=\"../images/package_download.png\" /><br />适用于 32 位 Windows 的 μ（7z，"+
+                           oLinkGenerator.getPackageSize('7z（32位）')+
+                           "）</p></a>"+
+                           "<a href=\"" +
+                           oLinkGenerator.getDownloadLink('7z（64位）', '百度云') +
+                           "\">" +
+                           "<p class=\"normal-font center-text\"><img src=\"../images/package_download.png\" /><br />适用于 64 位 Windows 的 μ（7z，"+
+                           oLinkGenerator.getPackageSize('7z（64位）')+
+                           "）</p></a>"+
+                           "</section>" +
                            "<section>" +
                            "<h2 class=\"align-left\">最低系统需求</h2>"+
                            "<p class=\"align-left\">"+

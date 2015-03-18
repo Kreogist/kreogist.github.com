@@ -136,11 +136,18 @@ var kgendonwload = new function(){
             //Windows platform.
             document.write('<section id="download-prefer">' +
                            "<a href=\"" +
-                           oLinkGenerator.getDownloadLink('7z', 'SourceForge') +
+                           oLinkGenerator.getDownloadLink('7z (32-bit)', 'SourceForge') +
                            "\">" +
-                           "<p class=\"normal-font center-text\"><img src=\"../images/package_download.png\" /><br />μ for Windows (7z, "+
-                           oLinkGenerator.getPackageSize('7z')+
-                           ")</p></a></section>" +
+                           "<p class=\"normal-font center-text\"><img src=\"../images/package_download.png\" /><br />μ for Windows (7z 32-bit, "+
+                           oLinkGenerator.getPackageSize('7z (32-bit)')+
+                           ")</p></a>"+
+                           "<a href=\"" +
+                           oLinkGenerator.getDownloadLink('7z (64-bit)', 'SourceForge') +
+                           "\">" +
+                           "<p class=\"normal-font center-text\"><img src=\"../images/package_download.png\" /><br />μ for Windows (7z 64-bit, "+
+                           oLinkGenerator.getPackageSize('7z (64-bit)')+
+                           ")</p></a>"+
+                           "</section>" +
                            "<section>" +
                            "<h2 class=\"align-left\">Minimum System Requirements</h2>"+
                            "<p class=\"align-left\">"+
