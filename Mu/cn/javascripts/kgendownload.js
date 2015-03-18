@@ -37,7 +37,7 @@
                     ['', '', 'http://pan.baidu.com/s/1bndHgGR', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.8/Windows/mu_0.8_x86_d8f9b24.7z/download'],
                     ['', '', 'http://pan.baidu.com/s/1c00FCty', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.8/Windows/mu_0.8_x64_d8f9b24.zip/download'],
                     ['', '', 'http://pan.baidu.com/s/1i3vLMmD', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.8/Windows/mu_0.8_x64_d8f9b24.7z/download'],
-                    ['', '', 'http://pan.baidu.com/s/1pJ7KK8V', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.8/Mac/mu_0.8_d8f9b24.app.zip/download'],
+                    ['', '', 'http://pan.baidu.com/s/1dDF6NvF', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.8/Mac/mu_0.8_d8f9b24.app.zip/download'],
                     ['', '', 'http://pan.baidu.com/s/1bno60mr', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.8/Linux/mu_0.8_d8f9b24.deb/download']
                 ];
 
