@@ -164,9 +164,9 @@ var kgendonwload = new function(){
                            "<h2 class=\"align-left\">Minimum System Requirements</h2>"+
                            "<p class=\"align-left\">"+
                            "  <ul>"+
-                           "    <li>A SSE3 supported CPU. (A Pentium® 4 HT or later/AMD Athlon 64 X2 or later)</li>"+
+                           "    <li>A SSE3 supported CPU. (A Intel® Pentium™ 4 HT or later/AMD® Athlon™ 64 x2 or later)</li>"+
                            "    <li>Minimum 170MB of available disk space.</li>"+
-                           "    <li>Microsoft(R) Windows XP SP2 or later.</li>"+
+                           "    <li>Microsoft® Windows® XP SP2 or later.</li>"+
                            "  </ul>"+
                            "</p>"+
                            "</section>");
@@ -188,7 +188,7 @@ var kgendonwload = new function(){
                                "<p class=\"align-left\">"+
                                "You need a Mac which can running OS X Lion (10.7) or later."+
                                "  <ul>"+
-                               "    <li>Mac computer with an Intel Core Duo or later.</li>"+
+                               "    <li>Mac computer with an Intel® Core™ Duo or later.</li>"+
                                "    <li>Minimum 140MB of available disk space.</li>"+
                                "    <li>OS X version 10.7 or later.</li>"+
                                "  </ul>"+

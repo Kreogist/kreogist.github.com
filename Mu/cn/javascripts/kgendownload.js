@@ -164,9 +164,9 @@
                            "<h2 class=\"align-left\">最低系统需求</h2>"+
                            "<p class=\"align-left\">"+
                            "  <ul>"+
-                           "    <li>一个支持SSE3指令集的CPU。（Pentium® 4 HT或更新、AMD Athlon 64 X2或更新）</li>"+
+                           "    <li>一个支持SSE3指令集的CPU。（Intel® Pentium™ 4 HT或更新、AMD® Athlon™ 64 x2或更新）</li>"+
                            "    <li>170 MB 的可用磁盘空间。</li>"+
-                           "    <li>Microsoft® Windows XP SP2 或更新版本的 Windows 操作系统。</li>"+
+                           "    <li>Microsoft® Windows® XP SP2 或更新版本的 Windows® 操作系统。</li>"+
                            "  </ul>"+
                            "</p>"+
                            "</section>");
@@ -188,7 +188,7 @@
                                "<p class=\"align-left\">"+
                                "你需要一台能够运行 OS X Lion（10.7）的 Mac。"+
                                "  <ul>"+
-                               "    <li>配有英特尔®酷睿™或更新版本处理器的 Mac 。</li>"+
+                               "    <li>配有Intel® Core™或更新版本处理器的 Mac 。</li>"+
                                "    <li>140 MB 的可用磁盘空间。</li>"+
                                "    <li>OS X 10.7 或者更新的版本。</li>"+
                                "  </ul>"+
@@ -216,7 +216,7 @@
                                "<h2 class=\"align-left\">最低系统需求</h2>"+
                                "<p class=\"align-left\">"+
                                "  <ul>"+
-                               "    <li>一个支持SSE3指令集的CPU。（Pentium® 4 HT或更新、AMD Athlon 64 X2或更新）</li>"+
+                               "    <li>一个支持SSE3指令集的CPU。（Intel® Pentium™ 4 HT或更新、AMD® Athlon™ 64 X2或更新）</li>"+
                                "    <li>170 MB 的可用磁盘空间。</li>"+
                                "  </ul>"+
                                "</p>"+
