@@ -49,7 +49,7 @@ var kgendonwload = new function(){
 					['https://github.com/Kreogist/Mu/releases/download/0.9/mu_0.9_64-bit_intel_a8b37b4201.7z', '', 'http://pan.baidu.com/s/1kTGmBm3', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9/Windows/mu_0.9_64-bit_intel_a8b37b4201.7z/download'],
 					['https://github.com/Kreogist/Mu/releases/download/0.9/mu_0.9_64-bit_amd_a8b37b4201.zip', '', 'http://pan.baidu.com/s/1dDhmUhN', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9/Windows/mu_0.9_64-bit_amd_a8b37b4201.zip/download'],
 					['https://github.com/Kreogist/Mu/releases/download/0.9/mu_0.9_64-bit_amd_a8b37b4201.7z', '', 'http://pan.baidu.com/s/1i38Phqt', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9/Windows/mu_0.9_64-bit_amd_a8b37b4201.7z/download'],
-                    ['https://github.com/Kreogist/Mu/releases/download/0.9/mu_0.9_mac_a8b37b4201.zip', '', 'http://pan.baidu.com/s/1pJEI2pl', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9/Mac/mu_0.8_d8f9b24.app.zip/download'],
+                    ['https://github.com/Kreogist/Mu/releases/download/0.9/mu_0.9_mac_a8b37b4201.zip', '', 'http://pan.baidu.com/s/1pJEI2pl', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9/Mac/mu_0.9_mac_a8b37b4201.zip/download'],
                     ['https://github.com/Kreogist/Mu/releases/download/0.9/mu_0.9_a8b37b4201.deb', '', 'http://pan.baidu.com/s/1mgpghAg', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9/Linux/mu_0.9_a8b37b4201.deb/download']
                 ];
 
