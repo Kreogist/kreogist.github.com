@@ -65,7 +65,7 @@
 <p class="align-left">一旦你完成了一些更改，并且希望能够将其推送至你Fork的项目之中，你只需像将其push到一个普通的项目一样，执行：</p>
 <pre><code>git push origin master
 </code></pre>
-<h3 class="align-left" id="pull-in-upstream-changes">拉去上游变动</h3>
+<h3 class="align-left" id="pull-in-upstream-changes">拉取上游变动</h3>
 <p class="align-left">有两种方法可以获得远端服务器上仓库和分支所提交的最新变更：<code>git fetch</code>和<code>git pull</code>。这两条命令一开始看起来十分类似，当你熟悉Git以后，你会发现这两个命令有着很大的差别。</p>
 <p class="align-left">当你使用<code>git pull</code>命令的时候，Git会尝试着自动为你做一些事情。这些事情是内容相关的，所以Git将会自动合并所拉去变动之中的任何一个文件到你当前工作的分支之中。你所必须记住的一件事情就是：git pull将会在你再次查看变更之前自动合并变更，如果你没有很仔细的管理你的分支，你将会沦陷于处理数不尽的冲突之中。</p>
 <pre><code>git pull upstream master
