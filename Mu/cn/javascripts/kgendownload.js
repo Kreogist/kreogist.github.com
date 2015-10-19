@@ -209,14 +209,14 @@
                                "<a href=\"" +
                                oLinkGenerator.getDownloadLink('deb', '百度云') +
                                "\">" +
-                               "<p class=\"normal-font center-text\"><img src=\"../images/package_download.png\" /><br />适用于 x86_64 架构 Linux 的 μ（deb, "+
+                               "<p class=\"normal-font center-text\"><img src=\"../images/package_download.png\" /><br />适用于 64 位 Linux 的 μ（deb, "+
                                oLinkGenerator.getPackageSize('deb')+
                                "）</p></a></section>" +
                                "<section>" +
                                "<h2 class=\"align-left\">最低系统需求</h2>"+
                                "<p class=\"align-left\">"+
                                "  <ul>"+
-                               "    <li>一个支持SSE3指令集的CPU。（Intel® Pentium™ 4 HT或更新、AMD® Athlon™ 64 X2或更新）</li>"+
+                               "    <li>一个支持SSE3指令集的CPU。（Intel® Pentium™ 4 HT或更新、AMD® Athlon™ 64 x2或更新）</li>"+
                                "    <li>170 MB 的可用磁盘空间。</li>"+
                                "  </ul>"+
                                "</p>"+

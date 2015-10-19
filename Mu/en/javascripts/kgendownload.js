@@ -148,13 +148,13 @@ var kgendonwload = new function(){
             //Windows platform.
             document.write('<section id="download-prefer">' +
                            "<a href=\"" +
-                           oLinkGenerator.getDownloadLink('7z (32-bit)', 'SourceForge') +
+                           oLinkGenerator.getDownloadLink('7z (32-bit)', 'Github') +
                            "\">" +
                            "<p class=\"normal-font center-text\"><img src=\"../images/package_download.png\" /><br />μ for Windows (7z 32-bit, "+
                            oLinkGenerator.getPackageSize('7z (32-bit)')+
                            ")</p></a>"+
                            "<a href=\"" +
-                           oLinkGenerator.getDownloadLink('7z (64-bit)', 'SourceForge') +
+                           oLinkGenerator.getDownloadLink('7z (64-bit)', 'Github') +
                            "\">" +
                            "<p class=\"normal-font center-text\"><img src=\"../images/package_download.png\" /><br />μ for Windows (7z 64-bit, "+
                            oLinkGenerator.getPackageSize('7z (64-bit)')+
@@ -178,7 +178,7 @@ var kgendonwload = new function(){
                 //Mac OS X with Intel processor.
                 document.write('<section id="download-prefer">' +
                                "<a href=\""+
-                               oLinkGenerator.getDownloadLink('app.zip', 'SourceForge') +
+                               oLinkGenerator.getDownloadLink('app.zip', 'Github') +
                                "\">"+
                                "<p class=\"normal-font center-text\"><img src=\"../images/package_download.png\" /><br />μ for Mac (.app.zip, "+
                                oLinkGenerator.getPackageSize('app.zip')+
@@ -207,16 +207,16 @@ var kgendonwload = new function(){
                 //Linux x86_64 platform.
                 document.write('<section id="download-prefer">' +
                                "<a href=\"" +
-                               oLinkGenerator.getDownloadLink('deb', 'SourceForge') +
+                               oLinkGenerator.getDownloadLink('deb', 'Github') +
                                "\">" +
-                               "<p class=\"normal-font center-text\"><img src=\"../images/package_download.png\" /><br />μ for Linux x86_64 (deb, "+
+                               "<p class=\"normal-font center-text\"><img src=\"../images/package_download.png\" /><br />μ for 64-bit Linux (deb, "+
                                oLinkGenerator.getPackageSize('deb')+
                                ")</p></a></section>" +
                                "<section>" +
                                "<h2 class=\"align-left\">Minimum System Requirements</h2>"+
                                "<p class=\"align-left\">"+
                                "  <ul>"+
-                               "    <li>A SSE3 supported CPU. (A Pentium® 4 HT or later/AMD Athlon 64 X2 or later)</li>"+
+                               "    <li>A SSE3 supported CPU. (A Intel® Pentium™ 4 HT or later/AMD® Athlon™ 64 x2 or later)</li>"+
                                "    <li>Minimum 170MB of available disk space.</li>"+
                                "  </ul>"+
                                "</p>"+
