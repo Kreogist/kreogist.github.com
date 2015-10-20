@@ -1,8 +1,9 @@
 var kgenlan = new function(){
   var oBook = new function(){
     var aBannerItems = [
+      ['hk', '繁體中文'],
       ['cn','简体中文'],
-      ['en','English'],
+	  ['en','English']
     ];
     this.generate = function () {
       var sBannerContext =   "<nav>";

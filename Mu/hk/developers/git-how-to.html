@@ -1,0 +1,80 @@
+<h1>Git 快速入門教程</h1>
+<p class="align-left">部分內容是從Github上的<a href="https://help.github.com/categories/54/articles">本頁</a>摘取而來，你可以流覽此頁獲取更多有關Git和Github的資訊。</p>
+<h2 class="align-left" id="introduction">簡介</h2>
+<p class="align-left">μ使用Git作為版本控制工具。這個文檔是旨在為μ的開發者和維護者們使用Git提供一個簡潔的指南。我們使用Github作為μ項目的主倉庫。</p>
+<p class="align-left">你可以在<a href="https://github.com/Kreogist/Mu">μ的Github項目首頁</a>獲取到項目倉庫的克隆位址。</p>
+<h2 class="align-left" id="getting-started-of-git">開始使用Git</h2>
+<p class="align-left"><strong>如果你在本章節的任何一步遇到了問題，請參閱<a href="https://help.github.com/articles/set-up-git#platform-all">Github上的Set Up Git</a>。任何本文檔中沒有提到的資訊均可在這個連結中查到。</strong></p>
+<h3 class="align-left" id="download-git">下載Git</h3>
+<p class="align-left">下載並安裝<a href="http://git-scm.com/downloads">最新版本的Git</a>。請注意Git不會在任何地方添加圖示，Git不是那一類的應用程式。</p>
+<h3 class="align-left" id="configure-git-name">配置 Git - 用戶名</h3>
+<p class="align-left">現在，你已經成功的安裝了Git，現在你需要為Git添加你的配置。你需要做的是打開命令列。首先你需要告訴Git你的名字，這樣Git就可以正確的標記你所做出的變更。</p>
+<pre><code>git config --global user.name "在此處填寫你的名字"
+</code></pre>
+<h3 class="align-left" id="configure-git-e-mail">配置 Git - 電子郵件</h3>
+<p class="align-left">Git會在你所作出的變更之中保存你的電子郵寄地址。Github使用電子郵寄地址來確定你所作的變更和你的Github帳戶。所以你需要設置電子郵寄地址。</p>
+<pre><code>git config --global user.email "你的電子郵寄地址@example.com"
+</code></pre>
+<p class="align-left">提示：如果你擁有一個Github帳戶並且你正在使用Github，你為Git設置的電子郵寄地址應當和Github上所使用的電子郵寄地址保持一致。如果你所設置的不一致，請參閱<a href="https://help.github.com/articles/how-do-i-change-my-primary-email-address">此嚮導</a>來添加附加電子郵寄地址到你的GitHub帳戶。如果你希望繼續隱藏你的電子郵件帳戶，<a href="https://help.github.com/articles/keeping-your-email-address-private">此想到</a>可能對你會有幫助。</p>
+<h3 class="align-left" id="configure-git-password-caching">配置 Git - 密碼緩存（Password Caching）</h3>
+<p class="align-left">我們需要進行設置的最後一項內容是：你可以告訴Git當你與遠端伺服器通信時，不需要提供你的用戶名與密碼。你需要版本為1.7.10或更高的Git來使用這項輔助認證（Credential Helper）。</p>
+<p class="align-left">如需使用此項設置，你需要啟用輔助認證（Credential Helper）以便能夠使得Git保存一段時間密碼：</p>
+<pre><code>git config --global credential.helper cache
+</code></pre>
+<p class="align-left">在預設模式下，Git將你的密碼可以保留15分鐘。你可以根據自己的需求更改時長：</p>
+<pre><code>git config --global credential.helper 'cache --timeout=3600'
+</code></pre>
+<p class="align-left">輔助認證（Credential Helper）只能在使用了HTTPS的倉庫連結中啟用。如果你使用了SSH的倉庫連結，SSH金鑰對將被用於身份驗證。<a href="">本嚮導</a>能夠幫助您生成並使用一個SSH金鑰對。</p>
+<p class="align-left">恭喜你，你現在已經成功的安裝並設置了Git和Github！</p>
+<h2 class="align-left" id="get-source-code">獲取原始程式碼</h2>
+<p class="align-left">有些情況下，你可能希望與他人協作，共同完成一個項目，或者希望使用其它人的項目作為一個自己的一個起始項目。這個功能被稱作開啟分支（更多的被稱作“Fork”）。</p>
+<p class="align-left">你可以Fork我們的μ項目作為你自己的項目倉庫，或者僅僅是克隆我們的項目倉庫。我們建議你將其Fork至你自己的項目倉庫。</p>
+<h3 class="align-left" id="fork-the-mu-repository">Fork我們的μ項目</h3>
+<p class="align-left">在Github上，如需Frok我們的μ項目倉庫，只需要按一下項目首頁上的“Fork”按鈕即可。</p>
+<p><img src="https://github-images.s3.amazonaws.com/help/bootcamp/Bootcamp-Fork.png" alt="Fork Mu" title="" /></p>
+<h3 class="align-left" id="clone-your-fork">克隆你的Fork</h3>
+<p class="align-left">你已經成功的Fork了μ的專案倉庫，但是它也僅僅是在Github上進行的操作。如果想要在專案倉庫中進行工作的話，你需要將專案克隆到本地。</p>
+<p class="align-left">執行這條命令：</p>
+<pre><code>git clone https://github.com/username/Mu.git
+</code></pre>
+<p class="align-left">我們建議你使用<code>https</code>的連結來克隆我們的項目。現在專案倉庫在本地已經是可用的了，它默認會被保存在一個叫“Mu”的資料夾中。</p>
+<h2 class="align-left" id="create-your-own-Mu">創建你自己的μ</h2>
+<p class="align-left">你已經成功的Fork了項目倉庫，你還可以做到如下的這些很酷的事情：</p>
+<h3 class="align-left" id="commit-your-changes">標記你的變更</h3>
+<p class="align-left">一個變更（Commit），或者被稱作“修訂版，是指標對一個（或者一些）檔所作出的特定的更改。它類似於保存一個檔，當使用Git的時候，每一次你保存均會使用一個被用來記錄何人何時所作出更改的唯一的ID（也被稱作“SHA”或者“hash”） 。變更經常包括一個簡短的描述資訊來說明這個變更對項目做出了那些更改。</p>
+<p class="align-left">你可以將變更考慮成在特定的時間為一個專案的快照——代碼、檔，一切。在你第一次標記變更後，Git將只會記錄你對檔所做出的變動，這就被稱作保存空間（Saving Space）。</p>
+<p class="align-left">欲創建一個變更，你需要先添加你所更改的檔，使用<code>git add</code>命令：</p>
+<p class="align-left"><code>git add</code>的詳細使用方法：</p>
+<pre><code>git add [options] [--] &lt;filepattern&gt;...
+
+-n, --dry-run         dry run
+-v, --verbose         be verbose
+-i, --interactive     interactive picking
+-p, --patch           select hunks interactively
+-e, --edit            edit current diff and apply
+-f, --force           allow adding otherwise ignored files
+-u, --update          update tracked files
+-N, --intent-to-add   record only the fact that the path will be added later
+-A, --all             add changes from all tracked and untracked files
+--refresh             don't add, only refresh the index
+--ignore-errors       just skip files which cannot be added because of errors
+--ignore-missing      check if - even missing - files are ignored in dry run
+</code></pre>
+<p class="align-left">警告：Git將會最大程度上的壓縮你的檔，但是大檔和二進位檔案會導致專案倉庫變得非常龐大。嘗試使用<strong>忽略更改</strong>一些文件，例如壓縮檔（zip、rar和jar類型的檔）、編譯後的檔（編譯檔，庫和可執行檔）、資料庫備份和媒體檔（flv、psd、音樂和視頻檔）。</p>
+<h3 class="align-left" id="push-commits">推送變更</h3>
+<p class="align-left">一旦你完成了一些更改，並且希望能夠將其推送至你Fork的項目之中，你只需像將其push到一個普通的專案一樣，執行：</p>
+<pre><code>git push origin master
+</code></pre>
+<h3 class="align-left" id="pull-in-upstream-changes">拉取上游變動</h3>
+<p class="align-left">有兩種方法可以獲得遠端伺服器上倉庫和分支所提交的最新變更：<code>git fetch</code>和<code>git pull</code>。這兩條命令一開始看起來十分類似，當你熟悉Git以後，你會發現這兩個命令有著很大的差別。</p>
+<p class="align-left">當你使用<code>git pull</code>命令的時候，Git會嘗試著自動為你做一些事情。這些事情是內容相關的，所以Git將會自動合併所拉去變動之中的任何一個檔到你當前工作的分支之中。你所必須記住的一件事情就是：git pull將會在你再次查看變更之前自動合併變更，如果你沒有很仔細的管理你的分支，你將會淪陷於處理數不盡的衝突之中。</p>
+<pre><code>git pull upstream master
+</code></pre>
+<p class="align-left">當你使用<code>git fetch</code>命令時，Git將會將遠端上的所有本地未存儲的變更保存到你本地的專案倉庫。儘管如此，它並不會將它們合併到你當前的分支。如果你需要保持你的倉庫為最新，而更新檔又有可能打斷你的開發時會特別有用。當你希望應用變更到你的本地分支的時候，使用<code>git merge</code>命令。這將合併兩個特定的分支，並且當出現衝突的時候會提示你。</p>
+<pre><code>git fetch upstream
+git merge upstream/master
+</code></pre>
+<h3 class="align-left" id="further-reading">更多閱讀資料</h3>
+<p class="align-left"><a href="https://help.github.com/articles/fork-a-repo#create-branches">Create branches（Github，英文）</a></p>
+<p class="align-left"><a href="https://help.github.com/articles/using-pull-requests">Using Pull Requests（Github，英文）</a></p>
+<p class="align-left"><a href="https://help.github.com/articles/deleting-a-repository">Delete a repository（Github，英文）</a></p>

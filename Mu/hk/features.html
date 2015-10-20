@@ -1,0 +1,159 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <link rel="shortcut icon" href="../favicon.png" type="image/x-icon" />
+    <title>Kreogist μ - 聆聽天籟</title>
+    <link rel="stylesheet" href="../stylesheets/styles.css">
+    <link rel="stylesheet" href="../stylesheets/pygment_trac.css">
+    <script type="text/javascript" src="../javascripts/respond.js"></script>
+    <script type="text/javascript" src="../javascripts/classie.js"></script>
+    <script type="text/javascript" src="javascripts/kaji.js"></script>
+    <script type="text/javascript" src="../javascripts/kcommon.js"></script>
+    <!--[if lt IE 9]>
+      <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+    <!--[if lt IE 8]>
+    <link rel="stylesheet" href="stylesheets/ie.css">
+    <![endif]-->
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+
+  </head>
+  <body id="features-page">
+    <script>kaji.writeBanner("", "features.html");</script>
+    <div class="wrapper">
+        <div id="title">
+          <section id="born-for-music">
+            <h1>每一首歌曲都是主角</h1>
+            <p>專注，為音樂而生。全新設計的介面讓你的歌曲變得更加耀眼。重新設計的搜索功能讓你不再錯過任何一首歌曲。從現在起，μ能夠自動適應你的螢幕，以便更好的欣賞每一張專輯。而你要做的，就是享受音樂的樂趣。</p>
+            <img id="mu-logo" src="../images/mu-logo.png" alt="mu-logo">
+          </section>
+          <section id="lossless">
+            <h2>無損，不失一切</h2>
+            <p>播放音樂是播放機的基石，音質即是播放機的生命。μ全面支援各種無損音樂格式，亦支援MP3、AAC等常見主流音訊格式。你只需插上耳機，靜坐，傾聽。</p>
+            <div id="music-tag1" class="music-tags"></div>
+            <div id="music-tag2" class="music-tags"></div>
+            <div id="music-tag3" class="music-tags"></div>
+            <div id="music-tag4" class="music-tags"></div>
+            <div id="music-tag5" class="music-tags"></div>
+            <div id="music-tag6" class="music-tags"></div>
+            <div id="music-tag7" class="music-tags"></div>
+            <div id="music-tag8" class="music-tags"></div>
+          </section>
+          <section id="enjoy-concert">
+            <h2>隨處開始你的音樂會</h2>
+            <p>堅如磐石的Qt開發架構，能夠讓μ在目前所有的主流的作業系統上運行。強大的基礎提供了強勁的性能與絕佳的使用者體驗。你的電腦已經待命，可以隨時為你開始音樂會。</p>
+            <img src="../images/preview-mac.png"   alt="preview-mac"   class="preview-pcs" id="preview-mac">
+            <img src="../images/preview-linux.png" alt="preview-linux" class="preview-pcs" id="preview-linux">
+            <img src="../images/preview-win.png"   alt="preview-win"   class="preview-pcs" id="preview-win">
+          </section>
+          <section id="open-source">
+            <h2>開源力量</h2>
+            <p>μ基於大量的開源專案構建。我們開放了μ的全部原始程式碼，不僅僅希望μ能夠持續進化，也能夠滿足極客們自訂的欲望。任何人都可以免費獲得μ的原始程式碼和開發文檔，我們也提供及時的線上技術支援。</p>
+            <img src="../images/open-source.png" alt="open-source" id="open-source-logo">
+            <img src="../images/ffmpeg-logo.png" class="opensource-logos" alt="ffmpeg-logo" id="ffmpeg-logo">
+            <img src="../images/qt-logo.png"     class="opensource-logos" alt="qt-logo"     id="qt-logo">
+            <img src="../images/vlc-logo.png"    class="opensource-logos" alt="vlc-logo"    id="vlc-logo">
+          </section>
+          <section>
+           <h2>開始你的音樂會吧</h2>
+            <p><img src="../images/start_your_concert.png"></p>
+            <p><a href="downloads.html">立即下載你自己的μ! ></a></p>
+          </section>
+      <footer>
+        <script>kaji.writeFooter("");</script>
+          </footer>
+        </div>
+    </div>
+    <!--add parallax effect-->
+    <div id="parallax-fore"></div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+    <script type="text/javascript">
+    (function(){
+
+      var foreLayer,
+          backLayer,
+          sectionBoxes,
+          sectionBoxesHeight;
+
+      function reactType(y) {
+        //-1 : before active
+        //0  : now active
+        //1  : after active
+        if ( ( y > (0.70)*sectionBoxesHeight ) ) {
+          return -1;
+        } else if ( y < (0.1)*sectionBoxesHeight ) {
+          return 1;
+        } else {
+          return 0;
+        }
+      }
+
+      function iconReactType(y) {
+        //-1 : before active
+        //0  : now active
+        //1  : after active
+        if ( ( y < (-0.25)*sectionBoxesHeight ) ) {
+          return 1;
+        } else  {
+          return 0;
+        }
+      }
+
+      function setState(sectionBox){
+        var state;
+        if (sectionBox.id == "born-for-music"){
+          state = iconReactType( sectionBox.getBoundingClientRect().top );
+        } else {
+          state = reactType( sectionBox.getBoundingClientRect().top );
+        }
+
+        switch (state) {
+          case 1:
+            sectionBox.setAttribute("class", "after-active");
+            break;
+          case -1:
+            sectionBox.setAttribute("class", "before-active");
+            break;
+          case 0:
+            sectionBox.setAttribute("class", "now-active");
+            break;
+        }
+      }
+
+      function applyState() {
+        for (var i = 0;i < sectionBoxes.length;i++) {
+          (function(i) {
+            var j = i;
+            setState(sectionBoxes[j]);
+          }
+          )(i);
+        }
+      }
+
+      function kajiScroll(){
+        //start parallax
+        var Y = window.pageYOffset;
+        backLayer.style.backgroundPosition = " 0 -" + Y*0.6 + "px";
+        foreLayer.style.backgroundPosition = " 0 -" + Y*0.8 + "px";
+        //end parallax
+
+        applyState();
+      }
+
+      function init(){
+        foreLayer = document.getElementById("parallax-fore");
+        backLayer = document.body;
+        sectionBoxes = Array.prototype.slice.call( document.querySelectorAll("#title>section") );
+        sectionBoxesHeight = sectionBoxes[0].getBoundingClientRect().height;
+        window.addEventListener("scroll",kajiScroll);
+        applyState();
+      }
+
+      init();
+
+    })();
+    </script>
+  </body>
+</html>

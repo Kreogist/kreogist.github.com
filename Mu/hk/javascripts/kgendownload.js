@@ -7,19 +7,19 @@
                 ];
         var lServerList = [
                     'Github',
-                    '华为网盘',
-                    '百度云',
+                    '華為網盤',
+                    '百度雲',
                     'SourceForge'
                 ];
         var lPackageType = [
-                    'zip（32位）',
-                    '7z（32位）',
-                    'zip（64位）',
-                    '7z（64位）',
-					'zip（64位，Intel）',
-					'7z（64位，Intel）',
-					'zip（64位，AMD）',
-					'7z（64位，AMD）',
+                    'zip（32位元）',
+                    '7z（32位元）',
+                    'zip（64位元）',
+                    '7z（64位元）',
+					'zip（64位元，Intel）',
+					'7z（64位元，Intel）',
+					'zip（64位元，AMD）',
+					'7z（64位元，AMD）',
 					'dmg',
                     'app.zip',
                     'deb'
@@ -151,25 +151,25 @@
             //Windows platform.
             document.write('<section id="download-prefer">' +
                            "<a href=\"" +
-                           oLinkGenerator.getDownloadLink('7z（32位）', '百度云') +
+                           oLinkGenerator.getDownloadLink('7z（32位元）', '百度雲') +
                            "\">" +
-                           "<p class=\"normal-font center-text\"><img src=\"../images/package_download.png\" /><br />适用于 32 位 Windows 的 μ（7z，"+
-                           oLinkGenerator.getPackageSize('7z（32位）')+
+                           "<p class=\"normal-font center-text\"><img src=\"../images/package_download.png\" /><br />適用於 32 位元 Windows 的 μ（7z，"+
+                           oLinkGenerator.getPackageSize('7z（32位元）')+
                            "）</p></a>"+
                            "<a href=\"" +
-                           oLinkGenerator.getDownloadLink('7z（64位）', '百度云') +
+                           oLinkGenerator.getDownloadLink('7z（64位元）', '百度雲') +
                            "\">" +
-                           "<p class=\"normal-font center-text\"><img src=\"../images/package_download.png\" /><br />适用于 64 位 Windows 的 μ（7z，"+
-                           oLinkGenerator.getPackageSize('7z（64位）')+
+                           "<p class=\"normal-font center-text\"><img src=\"../images/package_download.png\" /><br />適用於 64 位元 Windows 的 μ（7z，"+
+                           oLinkGenerator.getPackageSize('7z（64位元）')+
                            "）</p></a>"+
                            "</section>" +
                            "<section>" +
-                           "<h2 class=\"align-left\">最低系统需求</h2>"+
+                           "<h2 class=\"align-left\">最低系統需求</h2>"+
                            "<p class=\"align-left\">"+
                            "  <ul>"+
-                           "    <li>一个支持SSE3指令集的CPU。（Intel® Pentium™ 4 HT或更新、AMD® Athlon™ 64 x2或更新）</li>"+
-                           "    <li>170 MB 的可用磁盘空间。</li>"+
-                           "    <li>Microsoft® Windows® XP SP2 或更新版本的 Windows® 操作系统。</li>"+
+                           "    <li>一個支援SSE3指令集的CPU。（Intel® Pentium™ 4 HT或更新、AMD® Athlon™ 64 x2或更新）</li>"+
+                           "    <li>170 MB 的可用磁碟空間。</li>"+
+                           "    <li>Microsoft® Windows® XP SP2 或更新版本的 Windows® 作業系統。</li>"+
                            "  </ul>"+
                            "</p>"+
                            "</section>");
@@ -181,18 +181,18 @@
                 //Mac OS X with Intel processor.
                 document.write('<section id="download-prefer">' +
                                "<a href=\""+
-                               oLinkGenerator.getDownloadLink('dmg', '百度云') +
+                               oLinkGenerator.getDownloadLink('dmg', '百度雲') +
                                "\">"+
-                               "<p class=\"normal-font center-text\"><img src=\"../images/package_download.png\" /><br />适用于 Mac OS X 的 μ（dmg，"+
+                               "<p class=\"normal-font center-text\"><img src=\"../images/package_download.png\" /><br />適用於 Mac OS X 的 μ（dmg，"+
                                oLinkGenerator.getPackageSize('dmg')+
                                "）</p></a></section>"+
                                "<section>"+
-                               "<h2 class=\"align-left\">最低系统需求</h2>"+
+                               "<h2 class=\"align-left\">最低系統需求</h2>"+
                                "<p class=\"align-left\">"+
-                               "你需要一台能够运行 OS X Lion（10.7）的 Mac。"+
+                               "你需要一台能夠運行 OS X Lion（10.7）的 Mac。"+
                                "  <ul>"+
-                               "    <li>配有Intel® Core™或更新版本处理器的 Mac 。</li>"+
-                               "    <li>140 MB 的可用磁盘空间。</li>"+
+                               "    <li>配有Intel® Core™或更新版本處理器的 Mac 。</li>"+
+                               "    <li>140 MB 的可用磁碟空間。</li>"+
                                "    <li>OS X 10.7 或者更新的版本。</li>"+
                                "  </ul>"+
                                "</p>"+
@@ -200,7 +200,7 @@
             }
             else
             {
-                document.write("<p class=\"normal-font center-text\">很抱歉，但是 μ 不支持您所使用的 Mac 系统。</p>");
+                document.write("<p class=\"normal-font center-text\">很抱歉，但是 μ 不支援您所使用的 Mac 系統。</p>");
             }
         }
         else if(osString.indexOf("linux")>-1)
@@ -210,30 +210,30 @@
                 //Linux x86_64 platform.
                 document.write('<section id="download-prefer">' +
                                "<a href=\"" +
-                               oLinkGenerator.getDownloadLink('deb', '百度云') +
+                               oLinkGenerator.getDownloadLink('deb', '百度雲') +
                                "\">" +
-                               "<p class=\"normal-font center-text\"><img src=\"../images/package_download.png\" /><br />适用于 64 位 Linux 的 μ（deb, "+
+                               "<p class=\"normal-font center-text\"><img src=\"../images/package_download.png\" /><br />適用於 64 位元 Linux 的 μ（deb, "+
                                oLinkGenerator.getPackageSize('deb')+
                                "）</p></a></section>" +
                                "<section>" +
-                               "<h2 class=\"align-left\">最低系统需求</h2>"+
+                               "<h2 class=\"align-left\">最低系統需求</h2>"+
                                "<p class=\"align-left\">"+
                                "  <ul>"+
-                               "    <li>一个支持SSE3指令集的CPU。（Intel® Pentium™ 4 HT或更新、AMD® Athlon™ 64 x2或更新）</li>"+
-                               "    <li>170 MB 的可用磁盘空间。</li>"+
+                               "    <li>一個支援SSE3指令集的CPU。（Intel® Pentium™ 4 HT或更新、AMD® Athlon™ 64 x2或更新）</li>"+
+                               "    <li>170 MB 的可用磁碟空間。</li>"+
                                "  </ul>"+
                                "</p>"+
                                "</section>");
             }
             else
             {
-                document.write("<p class=\"normal-font center-text\">很抱歉，但是 μ 不支持您所使用的 Linux 系统。</p>");
+                document.write("<p class=\"normal-font center-text\">很抱歉，但是 μ 不支援您所使用的 Linux 系統。</p>");
             }
         }
         else
         {
             document.write("<p class=\"normal-font center-text\"><img src=\"../images/package_download_unavaliable.png\" /></p>")
-            document.write("<p class=\"normal-font center-text\">很抱歉，但是我们目前没有支持您系统的 μ 。</p>");
+            document.write("<p class=\"normal-font center-text\">很抱歉，但是我們目前沒有支援您系統的 μ 。</p>");
         }
     };
 
@@ -241,3 +241,4 @@
         document.write(oLinkGenerator.generate());
     };
 };
+

@@ -1,0 +1,90 @@
+﻿<h1>開放原始程式碼</h1>
+<p class="align-left">
+    我們使用了眾多開源社區的軟體構建了μ，並且我們從中也學習到了很多。我們希望能夠從中習得更多的東西，並且我們希望能幫助其它的開發者儘量避免我們曾經遇到過的一些很棘手的問題，同時。我們也希望能夠成為開源社區中的一員。我們堅信：開放原始程式碼的策略能夠讓我們的項目更加穩定。所以：我們決定開放μ的全部原始程式碼和專案文檔。
+</p>
+<p class="align-left">
+    如想進一步瞭解有關μ的許可證，請參閱本頁下方的許可證部分。
+</p>
+<h2 class="align-left">獲取原始程式碼</h2>
+<p class="align-left">
+    你隨時都能在我們的Github的<a href="https://github.com/Kreogist/Mu">專案首頁</a>下載到最新原始程式碼。
+</p>
+<p class="align-left">
+    你也可以從下面獲得原始程式碼的最新快照。原始程式碼將為Mac OS X/Linux用戶提供單個的tar.gz壓縮包檔，為Windows用戶提供zip壓縮包檔。
+</p>
+<p>
+    <script>
+    var osString = navigator.platform.toLowerCase();
+    if(osString.indexOf("win")>-1)
+    {
+      document.write("<a href=\"https://github.com/Kreogist/Mu/zipball/master\"><p class=\"normal-font center-text\"><img src=\"../../images/package_download.png\" /><br />適用於 Windows 的原始程式碼快照壓縮包（zip）</p></a>");
+    }
+    else
+    {
+      document.write("<a href=\"https://github.com/Kreogist/Mu/tarball/master\"><p class=\"normal-font center-text\"><img src=\"../../images/package_download.png\" /><br />適用於 Mac OS X/Linux 的原始程式碼快照壓縮包（tar.gz）</p></a>");
+    }
+    </script>
+</p>
+<h2 class="align-left">分支快照</h2>
+<p class="align-left">
+    你也可以獲取一個單一分支的原始程式碼快照壓縮包：
+    <ul>
+        <li>主分支</li>
+        <p class="align-left">
+            此分支包含了所有的主要升級，它總是穩定的。<br />
+            zip 壓縮包快照：<a href="https://github.com/Kreogist/Mu/zipball/master">Github</a>，<a href="http://git.oschina.net/Miyanaga/Mu/repository/archive?ref=master">Git@OSC</a><br />
+            tar.gz 壓縮包快照：<a href="https://github.com/Kreogist/Mu/tarball/master">Github</a>
+        </p>
+        <li>開發分支</li>
+        <p class="align-left">
+            此分支包含了所有的修正和新的功能，但是它有可能包含無數的bug，有時甚至是不可編譯的。<br />
+            zip 壓縮包快照：<a href="https://github.com/Kreogist/Mu/zipball/dev">Github</a>，<a href="http://git.oschina.net/Miyanaga/Mu/repository/archive?ref=dev">Git@OSC</a><br />
+            tar.gz 壓縮包快照：<a href="https://github.com/Kreogist/Mu/tarball/dev">Github</a>
+        </p>
+    </ul>
+</p>
+<h2 class="align-left">Git 倉庫</h2>
+<p class="align-left">
+    μ使用Git作為版本控制工具，這裡列出了所有可用的Git倉庫。
+</p>
+<table class="table-responsive">
+    <thead>
+        <tr>
+            <th>描述</th>
+            <th>克隆地址</th>
+            <th>流覽</th>
+            <th>快照</th>
+        </tr>
+    </thead>
+    <tbody>
+        <td>μ的主Git倉庫（使用HTTPS）</td>
+        <td><a href="https://github.com/Kreogist/Mu.git">https://github.com/Kreogist/Mu.git</a></td>
+        <td><a href="https://github.com/Kreogist/Mu/">流覽</td>
+        <td><a href="https://github.com/Kreogist/Mu/tarball/master">快照</a></td>
+    </tbody>
+    <tbody>
+        <td>μ的主Git倉庫（使用SSH）</td>
+        <td><a href="git@github.com:Kreogist/Mu.git">git@github.com:Kreogist/Mu.git</a></td>
+        <td><a href="https://github.com/Kreogist/Mu/">流覽</td>
+        <td><a href="https://github.com/Kreogist/Mu/tarball/master">快照</a></td>
+    </tbody>
+    <tbody>
+        <td>μ在Git@OSC上的Git倉庫（使用HTTPS）</td>
+        <td><a href="https://git.oschina.net/Miyanaga/Mu.git">https://git.oschina.net/Miyanaga/Mu.git</a></td>
+        <td><a href="http://git.oschina.net/Miyanaga/Mu">流覽</td>
+        <td><a href="http://git.oschina.net/Miyanaga/Mu/repository/archive?ref=master">快照</a></td>
+    </tbody>
+    <tbody>
+        <td>μ在Git@OSC上的Git倉庫（使用SSH）</td>
+        <td><a href="git@git.oschina.net:Miyanaga/Mu.git">git@git.oschina.net:Miyanaga/Mu.git</a></td>
+        <td><a href="http://git.oschina.net/Miyanaga/Mu">流覽</td>
+        <td><a href="http://git.oschina.net/Miyanaga/Mu/repository/archive?ref=master">快照</a></td>
+    </tbody>
+</table>
+<h2 class="align-left">許可證</h2>
+<p class="align-left">
+    μ、μ的原始程式碼使以及μ的SDK使用<a href="http://www.gnu.org/licenses/gpl-2.0.html">GNU通用公共授權合約第二版</a>或者<a href="http://www.gnu.org/licenses/gpl.html">任意一個更新版本的GNU通用公共授權合約</a>。在μ之中所有的默認外掛程式原始程式碼均使用此協定發放原始程式碼。你可以基於它們開發並且以任意形式發放、處理你自己編寫的外掛程式。
+</p>
+<p class="align-left">
+    所有依賴的開放原始程式碼項目以及它們的許可證均可以在<a href="index.html#Dependence">依賴</a>中找到它們的資訊。
+</p>
