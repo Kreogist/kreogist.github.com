@@ -25,17 +25,17 @@ var kgendonwload = new function(){
                     'deb'
                 ];
         var lPackageSize = [
-                    '37.0 MB',
-                    '26.6 MB',
-                    '51.1 MB',
-                    '38.7 MB',
-					'51.1 MB',
-					'38.7 MB',
-					'51.1 MB',
-					'38.7 MB',
-					'64.9 MB',
+                    '26.1 MB',
+                    '19.5 MB',
+                    '36.9 MB',
+                    '29.7 MB',
+					'36.9 MB',
+					'29.7 MB',
+					'36.9 MB',
+					'29.7 MB',
+					'38.9 MB',
                     '32.6 MB',
-                    '2.52 MB'
+                    '2.5 MB'
                 ];
         var lAvailablePackageType =[
                     [1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0],
@@ -43,17 +43,17 @@ var kgendonwload = new function(){
                     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
                 ];
         var lDownloadLinks = [
-                    ['https://github.com/Kreogist/Mu/releases/download/0.9.1/mu_0.9.1_32-bit_b0bc227.zip', '', 'http://pan.baidu.com/s/1sj3jHk5', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.1/Windows/mu_0.9.1_32-bit_b0bc227.zip/download'],
-                    ['https://github.com/Kreogist/Mu/releases/download/0.9.1/mu_0.9.1_32-bit_b0bc227.7z', '', 'http://pan.baidu.com/s/1dDyO6a9', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.1/Windows/mu_0.9.1_32-bit_b0bc227.7z/download'],
-                    ['https://github.com/Kreogist/Mu/releases/download/0.9.1/mu_0.9.1_64-bit_b0bc227.zip', '', 'http://pan.baidu.com/s/1jGpkQMi', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.1/Windows/mu_0.9.1_64-bit_b0bc227.zip/download'],
-                    ['https://github.com/Kreogist/Mu/releases/download/0.9.1/mu_0.9.1_64-bit_b0bc227.7z', '', 'http://pan.baidu.com/s/1c0nvmHq', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.1/Windows/mu_0.9.1_64-bit_b0bc227.7z/download'],
-					['https://github.com/Kreogist/Mu/releases/download/0.9.1/mu_0.9.1_64-bit_Intel_b0bc227.zip', '', 'http://pan.baidu.com/s/1qWQmw00', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.1/Windows/mu_0.9.1_64-bit_Intel_b0bc227.zip/download'],
-					['https://github.com/Kreogist/Mu/releases/download/0.9.1/mu_0.9.1_64-bit_Intel_b0bc227.7z', '', 'http://pan.baidu.com/s/1gdlTjzX', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.1/Windows/mu_0.9.1_64-bit_Intel_b0bc227.7z/download'],
-					['https://github.com/Kreogist/Mu/releases/download/0.9.1/mu_0.9.1_64-bit_AMD_b0bc227.zip', '', 'http://pan.baidu.com/s/1bndTSnX', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.1/Windows/mu_0.9.1_64-bit_AMD_b0bc227.zip/download'],
-					['https://github.com/Kreogist/Mu/releases/download/0.9.1/mu_0.9.1_64-bit_AMD_b0bc227.7z', '', 'http://pan.baidu.com/s/1qW25MdI', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.1/Windows/mu_0.9.1_64-bit_AMD_b0bc227.7z/download'],
-					['https://github.com/Kreogist/Mu/releases/download/0.9.1/mu_0.9.1_b0bc227.dmg', '', 'http://pan.baidu.com/s/1DhH0M', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.1/Mac/mu_0.9.1_b0bc227.dmg/download'],
-                    ['https://github.com/Kreogist/Mu/releases/download/0.9.1/mu_0.9.1_b0bc227.app.zip', '', 'http://pan.baidu.com/s/1gdDD8MB', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.1/Mac/mu_0.9.1_b0bc227.app.zip/download'],
-                    ['https://github.com/Kreogist/Mu/releases/download/0.9.1/mu_0.9.1_b0bc227.deb', '', 'http://pan.baidu.com/s/1i395FYt', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.1/Linux/mu_0.9.1_b0bc227.deb/download']
+                    ['', '', 'http://pan.baidu.com/s/1gdtxCK7', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.2/Windows/mu_0.9.2_x32_2bb6eab.zip/download'],
+                    ['', '', 'http://pan.baidu.com/s/1eELGE',   'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.2/Windows/mu_0.9.2_x32_2bb6eab.7z/download'],
+                    ['', '', 'http://pan.baidu.com/s/1o6CgrSu', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.2/Windows/mu_0.9.2_x64_2bb6eab.zip/download'],
+                    ['', '', 'http://pan.baidu.com/s/1dDrzRXZ', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.2/Windows/mu_0.9.2_x64_2bb6eab.7z/download'],
+					['', '', 'http://pan.baidu.com/s/1dDrzRXZ', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.2/Windows/mu_0.9.2_intel64_2bb6eab.zip/download'],
+					['', '', 'http://pan.baidu.com/s/1qW5W9Es', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.2/Windows/mu_0.9.2_intel64_2bb6eab.7z/download'],
+					['', '', 'http://pan.baidu.com/s/1qW6C51y', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.2/Windows/mu_0.9.2_amd64_2bb6eab.zip/download'],
+					['', '', 'http://pan.baidu.com/s/1eQ0Rsxc', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.2/Windows/mu_0.9.2_amd64_2bb6eab.7z/download'],
+					['', '', 'http://pan.baidu.com/s/1o6xTe8i', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.2/Mac/mu_0.9.2_2bb6eab.dmg/download'],
+                    ['', '', 'http://pan.baidu.com/s/1dDdmIPz', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.2/Mac/mu_0.9.2_2bb6eab.zip/download'],
+                    ['', '', 'http://pan.baidu.com/s/1hqlUeqg', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.2/Linux/mu_0.9.2_2bb6eab.deb/download']
                 ];
 
         this.getPackageSize = function(type) {
@@ -151,13 +151,13 @@ var kgendonwload = new function(){
             //Windows platform.
             document.write('<section id="download-prefer">' +
                            "<a href=\"" +
-                           oLinkGenerator.getDownloadLink('7z (32-bit)', 'Github') +
+                           oLinkGenerator.getDownloadLink('7z (32-bit)', 'SourceForge') +
                            "\">" +
                            "<p class=\"normal-font center-text\"><img src=\"../images/package_download.png\" /><br />μ for Windows (7z 32-bit, "+
                            oLinkGenerator.getPackageSize('7z (32-bit)')+
                            ")</p></a>"+
                            "<a href=\"" +
-                           oLinkGenerator.getDownloadLink('7z (64-bit)', 'Github') +
+                           oLinkGenerator.getDownloadLink('7z (64-bit)', 'SourceForge') +
                            "\">" +
                            "<p class=\"normal-font center-text\"><img src=\"../images/package_download.png\" /><br />μ for Windows (7z 64-bit, "+
                            oLinkGenerator.getPackageSize('7z (64-bit)')+
@@ -181,7 +181,7 @@ var kgendonwload = new function(){
                 //Mac OS X with Intel processor.
                 document.write('<section id="download-prefer">' +
                                "<a href=\""+
-                               oLinkGenerator.getDownloadLink('dmg', 'Github') +
+                               oLinkGenerator.getDownloadLink('dmg', 'SourceForge') +
                                "\">"+
                                "<p class=\"normal-font center-text\"><img src=\"../images/package_download.png\" /><br />μ for Mac (dmg, "+
                                oLinkGenerator.getPackageSize('dmg')+
@@ -210,7 +210,7 @@ var kgendonwload = new function(){
                 //Linux x86_64 platform.
                 document.write('<section id="download-prefer">' +
                                "<a href=\"" +
-                               oLinkGenerator.getDownloadLink('deb', 'Github') +
+                               oLinkGenerator.getDownloadLink('deb', 'SourceForge') +
                                "\">" +
                                "<p class=\"normal-font center-text\"><img src=\"../images/package_download.png\" /><br />μ for 64-bit Linux (deb, "+
                                oLinkGenerator.getPackageSize('deb')+
