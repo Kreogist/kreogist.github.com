@@ -1,0 +1,49 @@
+<h1>构建 Kreogist μ（Linux）</h1>
+<p class="align-left">本教程以 Debian 系 Linux 为例，使用其它包管理器的 Linux 均可参照此版本进行编译。</p>
+<h2 class="align-left">准备依赖</h2>
+<p class="align-left">在安装依赖过程中，需要使用管理员权限（sudo），需要您键入管理员密码。</p>
+<p class="align-left">首先，准备<code>GCC 4.8</code>或更高版本的<code>GCC</code>编译器。这里可以直接使用如下命令安装编译套件：</p>
+<pre><code>sudo apt-get install build-essential
+</code></pre>
+<p class="align-left">Linux 下的 μ 依赖于<code>Qt 5.3</code>或更高版本、<code>FFMpeg 1.0</code>或更高版本的部分以及<code>GStreamer 1.0</code>或更高版本。可通过以下命令直接安装这三个依赖：</p>
+<pre><code>sudo apt-get install qt5-default libgstreamer1.0-dev libavformat-dev libavutil-dev
+</code></pre>
+<p class="align-left">至此，编译 μ 的依赖就准备完毕了。</p>
+<p class="align-left">当然，我们建议您使用<code>Qt Creator</code>进行编译，以方便您对μ的代码进行修改。您可以通过下面的命令安装<code>Qt Creator</code>：</p>
+<pre><code>sudo apt-get install qtcreator
+</code></pre>
+<p class="align-left">除此以外，我们建议您安装<code>GStreamer 1.0</code>的相关插件以获取更多音频格式解码的支持，您可以通过下面的命令安装这三个插件：</p>
+<pre><code>sudo apt-get install gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-plugins-libav
+</code></pre>
+<h2 class="align-left">获取源代码</h2>
+<p class="align-left">您可以到我们的<a class="kjumper-link" href="#SourceCode" data-title="源代码" data-url="sourcecode.html">源代码页面</a>获取源代码镜像压缩包，下载后解压缩即可。您也可以通过<code>git</code>将软件仓库克隆到本地。这里我们将采用<code>git</code>的方式来获取源代码。</p>
+<p class="align-left">首先，请参照<a class="kjumper-link" href="#GitHowTo" data-title="Git 快速入门" data-url="git-how-to.html">Git 快速入门</a>在本机上搭建好<code>git</code>的环境，然后在命令行中切换到您准备存放源代码的目录，执行下列命令</p>
+<pre><code>git clone https://github.com/Kreogist/Mu.git
+</code></pre>
+<p class="align-left">或者</p>
+<pre><code>git clone https://git.oschina.net/Miyanaga/Mu.git
+</code></pre>
+<p class="align-left">您亦可选择其它的Git仓库，所有的Git仓库地址您可以在<a class="kjumper-link" href="#SourceCode" data-title="源代码" data-url="sourcecode.html">源代码页面</a>获取。</p>
+<p class="align-left">至此，编译的全部准备工作就已经完成了。</p>
+<h2 class="align-left">编译</h2>
+<p class="align-left">您可以选择使用<code>Qt Creator</code>进行编译或者使用命令行进行编译。这里，我们推荐使用<code>Qt Creator</code>进行编译。</p>
+<h3 class="align-left">使用 Qt Creator 进行编译</h3>
+<p class="align-left">首先，请使用<code>Qt Creator</code>打开源代码目录下的<code>mu.pro</code>文件。</p>
+<p class="align-left">在您第一次打开的<code>mu.pro</code>时候，您需要单击配置工程（Configure Project）按钮，然后进入编辑页面。</p>
+<p class="align-left">单击左侧的项目按钮，将编辑构建配置的下拉菜单中选择<code>Release</code>。在构建步骤中的<code>Make</code>步骤中，单击右侧的详情。</p>
+<p class="align-left">根据您的处理器逻辑线程数，在<code>Make</code>参数中填写：</p>
+<pre><code>-j线程数
+</code></pre>
+<p class="align-left">例如，您使用的是双核四线程处理器，则键入：</p>
+<pre><code>-j4
+</code></pre>
+<p class="align-left">然后单击构建菜单中的重新构建所有项目，即可开始编译。</p>
+<h3 class="align-left">使用命令行进行编译</h3>
+<p class="align-left">首先，您需要在源代码目录之外单独建立个文件夹，并打开命令行，切换到该文件夹目录下。然后使用<code>qmake</code>生成<code>Makefile</code>。</p>
+<pre><code>qmake mu.pro文件所在位置
+</code></pre>
+<p class="align-left">命令中的<code>mu.pro</code>文件是源代码目录下的<code>mu.pro</code>文件。</p>
+<p class="align-left">上面的命令完成后，您就可以使用<code>make</code>进行编译了。这里我们推荐您使用多线程编译，即使用<code>-j</code>参数，建议您的线程数与您的处理器逻辑线程数一致。例如，对于一台双核心四线程的处理器来说，您可以执行：</p>
+<pre><code>make -j4
+</code></pre>
+<p class="align-left">待编译完成后，在该目录下会生成一个<code>bin</code>文件夹，里面有编译好的二进制文件<code>mu</code>。</p>

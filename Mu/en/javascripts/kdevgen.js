@@ -6,7 +6,8 @@ var kdevgen = new function(){
             ['Documentation', 'Documentation',  'documentation.html'],
             ['Dependence',    'Dependence',     'dependence.html'],
             ['BugReport',     'Bug Report',     'bugreport.html'],
-            ['GitHowTo',      'Git How-to',     'git-how-to.html']
+            ['GitHowTo',      'Git How-to',     'git-how-to.html'],
+			['CompileHowTo',  'Build Kreogist μ',   'compile-how-to.html']
         ];
         var iListUBound=5;
         var sPrefix = "<li>";

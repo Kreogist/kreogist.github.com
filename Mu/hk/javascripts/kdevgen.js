@@ -6,7 +6,8 @@ var kdevgen = new function(){
             ['Documentation', '文檔',  'documentation.html'],
             ['Dependence',    '依賴',     'dependence.html'],
             ['BugReport',     'Bug 回饋',     'bugreport.html'],
-            ['GitHowTo',      'Git 快速入門',     'git-how-to.html']
+            ['GitHowTo',      'Git 快速入門',     'git-how-to.html'],
+			['CompileHowTo',  '構建 Kreogist μ',   'compile-how-to.html']
         ];
         var iListUBound=5;
         var sPrefix = "<li>";

@@ -1,0 +1,49 @@
+<h1>Build μ (Linux)</h1>
+<p class="align-left">This document will use Debian Linux for instance, Linux with other package management application could use this as an instruction.</p>
+<h2 class="align-left">Prepare dependence</h2>
+<p class="align-left">This step needs administrator privileges to install the dependence (sudo), you may need to input your adminitrator password.</p>
+<p class="align-left">First, you have to install<code>GCC 4.8</code> or later for compiling. You can install all the essential staffs by:</p>
+<pre><code>sudo apt-get install build-essential
+</code></pre>
+<p class="align-left">μ is dependent on<code>Qt 5.3</code>or later, partial<code>FFMpeg 1.0</code>or later and<code>GStreamer 1.0</code>or later under Linux. It's simple to install those three dependences with the following command:</p>
+<pre><code>sudo apt-get install qt5-default libgstreamer1.0-dev libavformat-dev libavutil-dev
+</code></pre>
+<p class="align-left">Now, all the essential dependences of μ is ready.</p>
+<p class="align-left">We suggest you to compile μ with<code>Qt Creator</code>. It's convienient to change the source code of μ. You can install<code>Qt Creator</code>by the following command:</p>
+<pre><code>sudo apt-get install qtcreator
+</code></pre>
+<p class="align-left">We also recommend you to install the plugins of<code>GStreamer 1.0</code>to get the supports of variant audio formats. To install those plugins, please execute the following command:</p>
+<pre><code>sudo apt-get install gstreamer1.0-plugins-bad gstreamer1.0-plugins-ugly gstreamer1.0-plugins-libav
+</code></pre>
+<h2 class="align-left">Get the Source Code</h2>
+<p class="align-left">You can visit <a class="kjumper-link" href="#SourceCode" data-title="Source Code" data-url="sourcecode.html">Source Code page</a> to get a snapshot package of the source code by extract the zip/tar.gz package. You can get the source code via<code>git</code> as well. We will use<code>git</code>to clone the repository here.</p>
+<p class="align-left">First, please visit <a class="kjumper-link" href="#GitHowTo" data-title="Git How-to" data-url="git-how-to.html">Git, managed code</a> page to set up<code>git</code>environment, then switch the path to the folder you want to put the source code, execute the following command:</p>
+<pre><code>git clone https://github.com/Kreogist/Mu.git
+</code></pre>
+<p class="align-left">or</p>
+<pre><code>git clone https://git.oschina.net/Miyanaga/Mu.git
+</code></pre>
+<p class="align-left">You can choose other Git Repositories, all the repositories can be found at <a class="kjumper-link" href="#SourceCode" data-title="Source Code" data-url="sourcecode.html">Source Code page</a>.</p>
+<p class="align-left">Now, it's ready to compile the source code.</p>
+<h2 class="align-left">Compile</h2>
+<p class="align-left">You can compile via<code>Qt Creator</code>or terminal. We suggest you to compile via<code>Qt Creator</code>.</p>
+<h3 class="align-left">Compile via Qt Creator</h3>
+<p class="align-left">First, open the <code>mu.pro</code>file under the source code directory in<code>Qt Creator</code>.</p>
+<p class="align-left">For the first time you open the<code>mu.pro</code>file, you have to click Configure Project button to enter the edit page.</p>
+<p class="align-left">Click the Project button on the left, Choose<code>Release</code>in the Edit build configure combo box. Click the Details on the right of the step<code>Make</code>.</p>
+<p class="align-left">According to your CPU logical threads number, Fill the <code>Make arguments</code> with</p>
+<pre><code>-j(Your CPU logical threads number)
+</code></pre>
+<p class="align-left">e.g., if you are using a dual core, quad threads CPU, you have to fill</p>
+<pre><code>-j4
+</code></pre>
+<p class="align-left">Click the Rebuild All item in the Build menu to start compile.</p>
+<h3 class="align-left">Compile via Terminal</h3>
+<p class="align-left">First, you have to create a new folder(we will call it build folder) out side the source code folder. Launch the terminal and switch to the build folder. Then use<code>qmake</code>to generate<code>Makefile</code>.</p>
+<pre><code>qmake (path to mu.pro)
+</code></pre>
+<p class="align-left">The<code>mu.pro</code>file is at the root of source code folder.</p>
+<p class="align-left">After the previous command finishs, you can use<code>make</code>command to compile. We suggest you to enable multithread compiling, i.e. argument<code>-j</code>. We suggest you to set the threads number to be the same as your logical threads number. e.g. if you are using a dual core quad threads CPU, you can execute:</p>
+<pre><code>make -j4
+</code></pre>
+<p class="align-left">When<code>make</code>finished, it will generate a<code>bin</code>folder, there's the compiled binary<code>mu</code>.</p>
