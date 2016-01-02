@@ -35,7 +35,7 @@ var kgendonwload = new function(){
 					'29.7 MB',
 					'39.0 MB',
                     '32.6 MB',
-                    '2.5 MB'
+                    '2.8 MB'
                 ];
         var lAvailablePackageType =[
                     [1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0],
@@ -43,17 +43,17 @@ var kgendonwload = new function(){
                     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
                 ];
         var lDownloadLinks = [
-                    ['', '', 'http://pan.baidu.com/s/1eQg8WEI', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.2r/Windows/mu_0.9.2r_x32_3e46300.zip/download'],
-                    ['', '', 'http://pan.baidu.com/s/1o6B0K1G', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.2r/Windows/mu_0.9.2r_x32_3e46300.7z/download'],
-                    ['', '', 'http://pan.baidu.com/s/1eQlY75K', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.2r/Windows/mu_0.9.2r_x64_3e46300.zip/download'],
-                    ['', '', 'http://pan.baidu.com/s/1c00VIwC', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.2r/Windows/mu_0.9.2r_x64_3e46300.7z/download'],
-					['', '', 'http://pan.baidu.com/s/1qWL6dRY', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.2r/Windows/mu_0.9.2r_x64_Intel_1d3ac35.zip/download'],
-					['', '', 'http://pan.baidu.com/s/1gdlq8Wb', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.2r/Windows/mu_0.9.2r_x64_Intel_3e46300.7z/download'],
-					['', '', 'http://pan.baidu.com/s/1bn8zvoN', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.2r/Windows/mu_0.9.2r_x64_AMD_3e46300.zip/download'],
-					['', '', 'http://pan.baidu.com/s/1eQseniq', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.2r/Windows/mu_0.9.2r_x64_AMD_3e46300.7z/download'],
-					['', '', 'http://pan.baidu.com/s/1c0G4QqO', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.2r/Mac/mu_0.9.2r_3e46300.dmg/download'],
-                    ['', '', 'http://pan.baidu.com/s/1jGwFMwm', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.2r/Mac/mu_0.9.2r_3e46300.zip/download'],
-                    ['', '', 'http://pan.baidu.com/s/1mg1v2qO', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.2r/Linux/mu_0.9.2r_3e46300.deb/download']
+                    ['', '', 'http://pan.baidu.com/s/1o6RPmYY', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.3/Windows/mu_0.9.3_win32_x32.zip/download'],
+                    ['', '', 'http://pan.baidu.com/s/1skbmAHv', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.3/Windows/mu_0.9.3_win32_x32.7z/download'],
+                    ['', '', 'http://pan.baidu.com/s/1qWXQPcg', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.3/Windows/mu_0.9.3_win32_x64.zip/download'],
+                    ['', '', 'http://pan.baidu.com/s/1mhn8ddQ', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.3/Windows/mu_0.9.3_win32_x64.7z/download'],
+					['', '', 'http://pan.baidu.com/s/1dDUP3bF', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.3/Windows/mu_0.9.3_win32_x64_intel.zip/download'],
+					['', '', 'http://pan.baidu.com/s/1pK3GUKF', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.3/Windows/mu_0.9.3_win32_x64_intel.7z/download'],
+					['', '', 'http://pan.baidu.com/s/1pKbqGll', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.3/Windows/mu_0.9.3_win32_x64_amd.zip/download'],
+					['', '', 'http://pan.baidu.com/s/1dEle1Df', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.3/Windows/mu_0.9.3_win32_x64_amd.7z/download'],
+					['', '', 'http://pan.baidu.com/s/1i4rHSDf', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.3/Mac/mu_0.9.3_mac.dmg/download'],
+                    ['', '', 'http://pan.baidu.com/s/1pKyXpwR', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.3/Mac/mu_0.9.3_mac.app.zip/download'],
+                    ['', '', 'http://pan.baidu.com/s/1qXmJUag', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.3/Linux/mu_0.9.3_amd64.deb/download']
                 ];
 
         this.getPackageSize = function(type) {
