@@ -26,16 +26,16 @@ var kgendonwload = new function(){
                 ];
         var lPackageSize = [
                     '47.2 MB',
-                    '36.3 MB',
-                    '36.9 MB',
-                    '29.7 MB',
-					'36.9 MB',
-					'29.7 MB',
-					'36.9 MB',
-					'29.7 MB',
-					'39.0 MB',
+                    '36.2 MB',
+                    '48.4 MB',
+                    '37.1 MB',
+					'48.4 MB',
+					'37.1 MB',
+					'48.4 MB',
+					'37.1 MB',
+					'66.2 MB',
                     '32.6 MB',
-                    '2.8 MB'
+                    '2.6 MB'
                 ];
         var lAvailablePackageType =[
                     [1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0],
@@ -43,17 +43,17 @@ var kgendonwload = new function(){
                     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
                 ];
         var lDownloadLinks = [
-                    ['', '', 'http://pan.baidu.com/s/1o6RPmYY', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.3/Windows/mu_0.9.3_win32_x32.zip/download'],
-                    ['', '', 'http://pan.baidu.com/s/1skbmAHv', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.3/Windows/mu_0.9.3_win32_x32.7z/download'],
-                    ['', '', 'http://pan.baidu.com/s/1qWXQPcg', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.3/Windows/mu_0.9.3_win32_x64.zip/download'],
-                    ['', '', 'http://pan.baidu.com/s/1mhn8ddQ', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.3/Windows/mu_0.9.3_win32_x64.7z/download'],
-					['', '', 'http://pan.baidu.com/s/1dDUP3bF', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.3/Windows/mu_0.9.3_win32_x64_intel.zip/download'],
-					['', '', 'http://pan.baidu.com/s/1pK3GUKF', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.3/Windows/mu_0.9.3_win32_x64_intel.7z/download'],
-					['', '', 'http://pan.baidu.com/s/1pKbqGll', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.3/Windows/mu_0.9.3_win32_x64_amd.zip/download'],
-					['', '', 'http://pan.baidu.com/s/1dEle1Df', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.3/Windows/mu_0.9.3_win32_x64_amd.7z/download'],
-					['', '', 'http://pan.baidu.com/s/1i4rHSDf', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.3/Mac/mu_0.9.3_mac.dmg/download'],
-                    ['', '', 'http://pan.baidu.com/s/1pKyXpwR', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.3/Mac/mu_0.9.3_mac.app.zip/download'],
-                    ['', '', 'http://pan.baidu.com/s/1qXmJUag', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.3/Linux/mu_0.9.3_amd64.deb/download']
+                    ['', '', 'http://pan.baidu.com/s/1eRv9pE6', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.4/Windows/mu_0.9.4_win32_38bee1a.zip/download'],
+                    ['', '', 'http://pan.baidu.com/s/1jHqHwn8', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.4/Windows/mu_0.9.4_win32_38bee1a.7z/download'],
+                    ['', '', 'http://pan.baidu.com/s/1geqNFYb', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.4/Windows/mu_0.9.4_win64_38bee1a.zip/download'],
+                    ['', '', 'http://pan.baidu.com/s/1VYX90', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.4/Windows/mu_0.9.4_win64_38bee1a.7z/download'],
+					['', '', 'http://pan.baidu.com/s/1i4iCgg1', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.4/Windows/mu_0.9.4_win64_intel_38bee1a.zip/download'],
+					['', '', 'http://pan.baidu.com/s/1dEfw2jv', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.4/Windows/mu_0.9.4_win64_intel_38bee1a.7z/download'],
+					['', '', 'http://pan.baidu.com/s/1c1iMpP2', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.4/Windows/mu_0.9.4_win64_amd_38bee1a.zip/download'],
+					['', '', 'http://pan.baidu.com/s/1mhvxbUK', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.4/Windows/mu_0.9.4_win64_amd_38bee1a.7z/download'],
+					['', '', 'http://pan.baidu.com/s/1gedq8EJ', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.4/Mac/mu_0.9.4_mac_38bee1a.dmg/download'],
+                    ['', '', 'http://pan.baidu.com/s/1eQY8Eps', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.4/Mac/mu_0.9.4_mac_38bee1a.app.zip/download'],
+                    ['', '', 'http://pan.baidu.com/s/1sku7bel', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.4/Linux/mu_0.9.4_ubuntu1504_38bee1a.deb/download']
                 ];
 
         this.getPackageSize = function(type) {
