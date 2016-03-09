@@ -22,38 +22,41 @@ var kgendonwload = new function(){
 					'7z (64-bit, AMD)',
 					'dmg',
                     'app.zip',
-                    'deb'
+                    'deb (Ubuntu 15.04)',
+                    'deb (Ubuntu 15.10)'
                 ];
         var lPackageSize = [
-                    '47.2 MB',
-                    '36.2 MB',
-                    '48.4 MB',
-                    '37.1 MB',
-					'48.4 MB',
-					'37.1 MB',
-					'48.4 MB',
-					'37.1 MB',
-					'66.2 MB',
-                    '32.6 MB',
-                    '2.6 MB'
+                    '47.4 MB',
+                    '36.4 MB',
+                    '48.6 MB',
+                    '37.3 MB',
+					'48.6 MB',
+					'37.3 MB',
+					'48.6 MB',
+					'37.3 MB',
+					'65.8 MB',
+                    '32.4 MB',
+                    '2.7 MB',
+                    '2.7 MB'
                 ];
         var lAvailablePackageType =[
-                    [1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0],
-                    [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
-                    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
+                    [1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0, 0],
+                    [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0, 0],
+                    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1, 1]
                 ];
         var lDownloadLinks = [
-                    ['', '', 'http://pan.baidu.com/s/1eRv9pE6', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.4/Windows/mu_0.9.4_win32_38bee1a.zip/download'],
-                    ['', '', 'http://pan.baidu.com/s/1jHqHwn8', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.4/Windows/mu_0.9.4_win32_38bee1a.7z/download'],
-                    ['', '', 'http://pan.baidu.com/s/1geqNFYb', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.4/Windows/mu_0.9.4_win64_38bee1a.zip/download'],
-                    ['', '', 'http://pan.baidu.com/s/1VYX90', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.4/Windows/mu_0.9.4_win64_38bee1a.7z/download'],
-					['', '', 'http://pan.baidu.com/s/1i4iCgg1', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.4/Windows/mu_0.9.4_win64_intel_38bee1a.zip/download'],
-					['', '', 'http://pan.baidu.com/s/1dEfw2jv', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.4/Windows/mu_0.9.4_win64_intel_38bee1a.7z/download'],
-					['', '', 'http://pan.baidu.com/s/1c1iMpP2', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.4/Windows/mu_0.9.4_win64_amd_38bee1a.zip/download'],
-					['', '', 'http://pan.baidu.com/s/1mhvxbUK', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.4/Windows/mu_0.9.4_win64_amd_38bee1a.7z/download'],
-					['', '', 'http://pan.baidu.com/s/1gedq8EJ', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.4/Mac/mu_0.9.4_mac_38bee1a.dmg/download'],
-                    ['', '', 'http://pan.baidu.com/s/1eQY8Eps', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.4/Mac/mu_0.9.4_mac_38bee1a.app.zip/download'],
-                    ['', '', 'http://pan.baidu.com/s/1sku7bel', 'http://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.4/Linux/mu_0.9.4_ubuntu1504_38bee1a.deb/download']
+                    ['', '', 'http://pan.baidu.com/s/1dEiNBsl', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.9/Windows/mu_0.9.9_win32_c2340db.zip/download'],
+                    ['', '', 'http://pan.baidu.com/s/1dDPkXRN', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.9/Windows/mu_0.9.9_win32_c2340db.7z/download'],
+                    ['', '', 'http://pan.baidu.com/s/1i4bUazz', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.9/Windows/mu_0.9.9_win64_c2340db.zip/download'],
+                    ['', '', 'http://pan.baidu.com/s/1mhueJVi', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.9/Windows/mu_0.9.9_win64_c2340db.7z/download'],
+					['', '', 'http://pan.baidu.com/s/1eRn5uAA', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.9/Windows/mu_0.9.9_win64_intel_c2340db.zip/download'],
+					['', '', 'http://pan.baidu.com/s/1c0O7cMs', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.9/Windows/mu_0.9.9_win64_intel_c2340db.7z/download'],
+					['', '', 'http://pan.baidu.com/s/1dEl57lZ', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.9/Windows/mu_0.9.9_win64_amd_c2340db.zip/download'],
+					['', '', 'http://pan.baidu.com/s/1nu0Os7v', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.9/Windows/mu_0.9.9_win64_amd_c2340db.7z/download'],
+					['', '', 'http://pan.baidu.com/s/1kUc5WYb', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.9/Mac/mu_0.9.9_mac_c2340db.dmg/download'],
+                    ['', '', 'http://pan.baidu.com/s/1dDToFbN', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.9/Mac/mu_0.9.9_mac_c2340db.app.zip/download'],
+                    ['', '', 'http://pan.baidu.com/s/1gemhytd', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.9/Linux/mu_0.9.9_amd64_ubuntu_15_04.deb/download'],
+                    ['', '', 'http://pan.baidu.com/s/1bkpJsy', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.9/Linux/mu_0.9.9_amd64_ubuntu_15_10.deb/download']
                 ];
 
         this.getPackageSize = function(type) {
@@ -210,10 +213,10 @@ var kgendonwload = new function(){
                 //Linux x86_64 platform.
                 document.write('<section id="download-prefer">' +
                                "<a href=\"" +
-                               oLinkGenerator.getDownloadLink('deb', 'SourceForge') +
+                               oLinkGenerator.getDownloadLink('deb (Ubuntu 15.04)', 'SourceForge') +
                                "\">" +
-                               "<p class=\"normal-font center-text\"><img src=\"../images/package_download.png\" /><br />μ for 64-bit Linux (deb, "+
-                               oLinkGenerator.getPackageSize('deb')+
+                               "<p class=\"normal-font center-text\"><img src=\"../images/package_download.png\" /><br />μ for 64-bit Ubuntu 15.10 (deb, "+
+                               oLinkGenerator.getPackageSize('deb (Ubuntu 15.04)')+
                                ")</p></a></section>" +
                                "<section>" +
                                "<h2 class=\"align-left\">Minimum System Requirements</h2>"+
