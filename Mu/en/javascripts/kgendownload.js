@@ -12,17 +12,17 @@ var kgendonwload = new function(){
                     'SourceForge'
                 ];
         var lPackageType = [
-                    'zip（32位）',
-                    '7z（32位）',
-                    'zip（64位）',
-                    '7z（64位）',
-					'zip（64位，Intel）',
-					'7z（64位，Intel）',
-					'zip（64位，AMD）',
-					'7z（64位，AMD）',
+                    'zip (32-bit)',
+                    '7z (32-bit)',
+                    'zip (64-bit)',
+                    '7z (64-bit)',
+					'zip (64-bit, Intel)',
+					'7z (64-bit, Intel)',
+					'zip (64-bit, AMD)',
+					'7z (64-bit, AMD)',
 					'dmg',
                     'app.zip',
-                    'deb（Ubuntu 15.10）'
+                    'deb (Ubuntu 15.10)'
                 ];
         var lPackageSize = [
                     '49.6 MB',
