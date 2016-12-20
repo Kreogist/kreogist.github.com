@@ -5,8 +5,7 @@ var kaji = new function(){
       ['Features','features.html'],
       ['Downloads', 'downloads.html'],
       ['Developers', 'developers/index.html'],
-      ['Support', 'support.html'],
-	  ['Donate', 'donate.html']
+      ['Support', 'support.html']
     ];
     this.generate = function (sPrefix, sCurrentFilename) {
       var sBannerContext = "<div id=\"header\">"

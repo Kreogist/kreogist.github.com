@@ -5,8 +5,7 @@ var kaji = new function(){
       ['功能','features.html'],
       ['下载', 'downloads.html'],
       ['开发者', 'developers/index.html'],
-      ['支持', 'support.html'],
-	  ['捐赠','donate.html']
+      ['支持', 'support.html']
     ];
     this.generate = function (sPrefix, sCurrentFilename) {
       var sBannerContext = "<div id=\"header\">"
