@@ -43,17 +43,17 @@ var kgendonwload = new function(){
                     [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
                 ];
         var lDownloadLinks = [
-                    ['', '', '', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.9.3/Windows/mu_0.9.9.3_win32_d9b5f2d.zip/download'],
-                    ['', '', '', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.9.3/Windows/mu_0.9.9.3_win32_d9b5f2d.7z/download'],
-                    ['', '', 'http://pan.baidu.com/s/1eRVcUL8', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.9.3/Windows/mu_0.9.9.3_win64_d9b5f2d.zip/download'],
-                    ['', '', 'http://pan.baidu.com/s/1slHz8G9', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.9.3/Windows/mu_0.9.9.3_win64_d9b5f2d.7z/download'],
-					['', '', 'http://pan.baidu.com/s/1dE5w45F', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.9.3/Windows/mu_0.9.9.3_win64_intel_d9b5f2d.zip/download'],
-					['', '', 'http://pan.baidu.com/s/1slw0PgL', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.9.3/Windows/mu_0.9.9.3_win64_intel_d9b5f2d.7z/download'],
-					['', '', 'http://pan.baidu.com/s/1bpJTWV9', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.9.3/Windows/mu_0.9.9.3_win64_amd_d9b5f2d.zip/download'],
-					['', '', 'http://pan.baidu.com/s/1o8TaW58', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.9.3/Windows/mu_0.9.9.3_win64_amd_d9b5f2d.7z/download'],
-					['', '', 'http://pan.baidu.com/s/1pL1oCor', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.9.3/Mac/mu_0.9.9.3_mac_d9b5f2d.dmg/download'],
-                    ['', '', 'http://pan.baidu.com/s/1o7QIRVW', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.9.3/Mac/mu_0.9.9.3_mac_d9b5f2d.app.zip/download'],
-                    ['', '', 'http://pan.baidu.com/s/1bpwnv4b', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/0.9.9.3/Linux/mu_0.9.9.3_amd64_d9b5f2d.deb/download']
+                    ['', '', 'https://pan.baidu.com/s/1dFoYXSd', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta1/Windows/mu_1.0.0-beta_win32_d9b5f2d.zip/download'],
+                    ['', '', 'https://pan.baidu.com/s/1slm8BDj', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta1/Windows/mu_1.0.0-beta_win32_d9b5f2d.7z/download'],
+                    ['', '', 'https://pan.baidu.com/s/1nvwkiXN', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta1/Windows/mu_1.0.0-beta_win64_d9b5f2d.zip/download'],
+                    ['', '', 'https://pan.baidu.com/s/1crMTt0',  'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta1/Windows/mu_1.0.0-beta_win64_d9b5f2d.7z/download'],
+          ['', '', 'https://pan.baidu.com/s/1o85B8Zg', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta1/Windows/mu_1.0.0-beta_win64_intel_d9b5f2d.zip/download'],
+          ['', '', 'https://pan.baidu.com/s/1dFKNe3B', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta1/Windows/mu_1.0.0-beta_win64_intel_d9b5f2d.7z/download'],
+          ['', '', 'https://pan.baidu.com/s/1dFafSS5', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta1/Windows/mu_1.0.0-beta_win64_amd_d9b5f2d.zip/download'],
+          ['', '', 'https://pan.baidu.com/s/1bpN8TKr', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta1/Windows/mu_1.0.0-beta_win64_amd_d9b5f2d.7z/download'],
+          ['', '', 'https://pan.baidu.com/s/1jH533Qu', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta1/Mac/mu_1.0.0-beta_mac_d9b5f2d.dmg/download'],
+                    ['', '', 'https://pan.baidu.com/s/1geJgMwb', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta1/Mac/mu_1.0.0-beta_mac_d9b5f2d.app.zip/download'],
+                    ['', '', 'https://pan.baidu.com/s/1i4GuUTR', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta1/Linux/mu_1.0.0-beta_ubuntu_amd64_d9b5f2d.deb/download']
                 ];
 
         this.getPackageSize = function(type) {
