@@ -24,37 +24,9 @@ var kgendonwload = new function(){
                     'app.zip',
                     'deb (Ubuntu 16.04)'
                 ];
-        var lPackageSize = [
-                    '51.0 MB',
-                    '38.0 MB',
-                    '51.0 MB',
-                    '39.0 MB',
-					'51.0 MB',
-					'39.0 MB',
-					'51.0 MB',
-					'39.0 MB',
-					'71.1 MB',
-                    '34.8 MB',
-                    '2.9 MB'
-                ];
-        var lAvailablePackageType =[
-                    [1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0],
-                    [0, 0, 0, 0, 0, 0, 0, 0, 1, 1, 0],
-                    [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 1]
-                ];
-        var lDownloadLinks = [
-            ['', '', 'https://pan.baidu.com/s/1miwqm4w', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta2/Windows/mu_1.0.0-beta2_win32_8c906fc.zip/download'],
-            ['', '', 'https://pan.baidu.com/s/1hsd1400', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta2/Windows/mu_1.0.0-beta2_win32_8c906fc.7z/download'],
-            ['', '', 'https://pan.baidu.com/s/1o7ZRxIM', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta2/Windows/mu_1.0.0-beta2_win64_8c906fc.zip/download'],
-            ['', '', 'https://pan.baidu.com/s/1o8C1jEq', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta2/Windows/mu_1.0.0-beta2_win64_8c906fc.7z/download'],
-            ['', '', 'https://pan.baidu.com/s/1pKXNAgr', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta2/Windows/mu_1.0.0-beta2_win64_intel_8c906fc.zip/download'],
-            ['', '', 'https://pan.baidu.com/s/1qYv2glY', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta2/Windows/mu_1.0.0-beta2_win64_intel_8c906fc.7z/download'],
-            ['', '', 'https://pan.baidu.com/s/1i5HvdXF', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta2/Windows/mu_1.0.0-beta2_win64_amd_8c906fc.zip/download'],
-            ['', '', 'https://pan.baidu.com/s/1jILwNDO', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta2/Windows/mu_1.0.0-beta2_win64_amd_8c906fc.7z/download'],
-            ['', '', 'https://pan.baidu.com/s/1dFKRcUd', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta2/Mac/mu_1.0.0-beta2_mac_8c906fc.dmg/download'],
-            ['', '', 'https://pan.baidu.com/s/1i5Drq5n', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta2/Mac/mu_1.0.0-beta2_mac_8c906fc.app.zip/download'],
-            ['', '', 'https://pan.baidu.com/s/1jIA71Fw', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta2/Linux/mu_1.0.0-beta2_ubuntu_amd64_8c906fc.deb/download']
-                ];
+                var lPackageSize = kPackageSize;
+                var lAvailablePackageType = kAvailablePackageType;
+                var lDownloadLinks = kDownloadLinks;
 
         this.getPackageSize = function(type) {
             for (var i = 0; i < lPackageType.length ; ++i){
