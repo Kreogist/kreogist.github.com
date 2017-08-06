@@ -1,15 +1,15 @@
 var kPackageSize = [
-'51.0 MB',
-'38.0 MB',
-'40.0 MB',
-'32.2 MB',
-'40.0 MB',
-'32.2 MB',
-'40.0 MB',
-'32.2 MB',
-'41.6 MB',
-'35.3 MB',
-'2.9 MB'];
+'39.0 MB',
+'31.4 MB',
+'39.7 MB',
+'31.9 MB',
+'39.7 MB',
+'31.9 MB',
+'39.7 MB',
+'31.9 MB',
+'67.1 MB',
+'34.7 MB',
+'3.0 MB'];
 
 var kAvailablePackageType = [
     [1, 1, 1, 1, 1, 1, 1, 1, 0, 0, 0],
@@ -18,15 +18,15 @@ var kAvailablePackageType = [
 ];
 
 var kDownloadLinks = [
-    ['', '', 'https://pan.baidu.com/s/1eRVzccE', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta3/Windows/mu_1.0.0-beta3_win32_fd1fea5.zip/download'],
-    ['', '', 'https://pan.baidu.com/s/1hrTthIk', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta3/Windows/mu_1.0.0-beta3_win32_fd1fea5.7z/download'],
-    ['', '', 'https://pan.baidu.com/s/1hrG1NJQ', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta3/Windows/mu_1.0.0-beta3_win64_fd1fea5.zip/download'],
-    ['', '', 'https://pan.baidu.com/s/1jIvFuSm', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta3/Windows/mu_1.0.0-beta3_win64_fd1fea5.7z/download'],
-    ['', '', 'https://pan.baidu.com/s/1nuHDDcl', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta3/Windows/mu_1.0.0-beta3_win64_intel_fd1fea5.zip/download'],
-    ['', '', 'https://pan.baidu.com/s/1bV7iUE' , 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta3/Windows/mu_1.0.0-beta3_win64_intel_fd1fea5.7z/download'],
-    ['', '', 'https://pan.baidu.com/s/1slbirEl', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta3/Windows/mu_1.0.0-beta3_win64_amd_fd1fea5.zip/download'],
-    ['', '', 'https://pan.baidu.com/s/1nvaAx41', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta3/Windows/mu_1.0.0-beta3_win64_amd_fd1fea5.7z/download'],
-    ['', '', 'https://pan.baidu.com/s/1o8uRrYi', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta3/Mac/mu_1.0.0-beta3_mac_fd1fea5.dmg/download'],
-    ['', '', 'https://pan.baidu.com/s/1qYobAFi', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta3/Mac/mu_1.0.0-beta3_mac_fd1fea5.app.zip/download'],
-    ['', '', 'https://pan.baidu.com/s/1eRVzccE', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta3/Linux/mu_1.0.0-beta2_ubuntu_amd64_fd1fea5.deb/download']
+    ['', '', 'https://pan.baidu.com/s/1dET0hyD', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta4/Windows/mu_1.0.0-beta4_win32_0708ffe.zip/download'],
+    ['', '', 'https://pan.baidu.com/s/1bQiyPS', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta4/Windows/mu_1.0.0-beta4_win32_0708ffe.7z/download'],
+    ['', '', 'https://pan.baidu.com/s/1crSH6e', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta4/Windows/mu_1.0.0-beta4_win64_0708ffe.zip/download'],
+    ['', '', 'https://pan.baidu.com/s/1jHHeH9O', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta4/Windows/mu_1.0.0-beta4_win64_0708ffe.7z/download'],
+    ['', '', 'https://pan.baidu.com/s/1i53PExJ', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta4/Windows/mu_1.0.0-beta4_win64_intel_0708ffe.zip/download'],
+    ['', '', 'https://pan.baidu.com/s/1geXzM3T', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta4/Windows/mu_1.0.0-beta4_win64_intel_0708ffe.7z/download'],
+    ['', '', 'https://pan.baidu.com/s/1b7R7oa', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta4/Windows/mu_1.0.0-beta4_win64_amd_0708ffe.zip/download'],
+    ['', '', 'https://pan.baidu.com/s/1qXOZUQK', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta4/Windows/mu_1.0.0-beta4_win64_amd_0708ffe.7z/download'],
+    ['', '', 'https://pan.baidu.com/s/1dE0ZQeP', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta4/Mac/mu_1.0.0-beta4_mac_0708ffe.dmg/download'],
+    ['', '', 'https://pan.baidu.com/s/1qYbleOk', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta4/Mac/mu_1.0.0-beta4_mac_0708ffe.app.zip/download'],
+    ['', '', 'https://pan.baidu.com/s/1o7Xl6J4', 'https://sourceforge.net/projects/kreogist-mu/files/Releases/1.0-beta4/Linux/mu_1.0.0-beta4_ubuntu_amd64_0708ffe.deb/download']
 ];
